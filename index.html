@@ -473,8 +473,8 @@ $( document ).ready( function()
 {
     for(const stratagem of window.data.stratagems)
     {
-        const className = stratagem.title.toLowerCase().replace(' ', '-');
-        const typeClass = stratagem.type.toLowerCase().replace(' stratagem', '').replace(' ', '-');
+        const className = stratagem.title.toLowerCase().replaceAll(' ', '-');
+        const typeClass = stratagem.type.toLowerCase().replace(' stratagem', '').replaceAll(' ', '-');
         const state = window.localStorage.getItem(className) ?? true;
 
         $( '#setup ol' ).append( '<li><input type="checkbox" class="switch" id="switch-' + className + '" autocomplete="off" ' + ( state === true ? 'checked="checked" ' : ' ' ) + '/><label for="switch-' + className + '" data-class="' + className + '">Show "' + stratagem.title + '" on the list</label>' + stratagem.description + '</li>' );
