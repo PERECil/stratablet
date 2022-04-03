@@ -395,7 +395,7 @@ input[type="checkbox"].switch:checked + label::after
     bottom: 0;
     color: #ffffff;
     font-family: conduit, sans-serif;
-    font-size: 1.0em;
+    font-size: 1.5em;
     height: 100%;
     left: -20em;
     overflow-x: hidden;
@@ -410,10 +410,13 @@ input[type="checkbox"].switch:checked + label::after
 #sidebar a {
     color: inherit;
     display: block;
+    height: 1em;
     text-decoration: none;
+    text-overflow: ellipsis;
     padding: 5px 10px;
     border-bottom: 1px solid #ccc;
     text-transform: uppercase;
+    width: 20em;
 }
 
 #sidebar-collapse
@@ -451,19 +454,15 @@ input[type="checkbox"].switch:checked + label::after
 @media only screen and (max-width: 600px) {
 
     article {
-        padding-bottom: 12em;
-    }
-
-    #sidebar a {
-        font-size: 2em;
+        padding-bottom: 6em;
     }
 
     #setup-button {
-        font-size: 6em;
+        font-size: 4em;
     }
 
     #sidebar-button {
-        font-size: 6em;
+        font-size: 4em;
     }
 }
 
