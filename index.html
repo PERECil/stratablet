@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" manifest="~/manifest.appcache">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript" src="data/craftworlds.js"></script>
+        <style type="text/css">
+
+@font-face {
+    font-family: 'conduit';
+    src: url('resources/fonts/Conduit-ExtraBold.otf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'conduit';
+    src: url('resources/fonts/Conduit-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'conduit';
+    src: url('resources/fonts/Conduit-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'conduit';
+    src: url('resources/fonts/Conduit-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'conduit';
+    src: url('resources/fonts/Conduit-ExtraLight.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'conduit';
+    src: url('resources/fonts/Conduit-Light.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'conduit';
+    src: url('resources/fonts/Conduit-LightItalic.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'conduit';
+    src: url('resources/fonts/Conduit-Medium.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'conduit';
+    src: url('resources/fonts/Conduit-MediumItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'hirakaku';
+    src: url('resources/fonts/HirakakuPro-Medium.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hirakaku';
+    src: url('resources/fonts/HirakakuPro-Bold.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'myriad';
+    src: url('resources/fonts/MyriadPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'novarese';
+    src: url('resources/fonts/NovareseStd-Medium.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'zurich';
+    src: url('resources/fonts/ZurichBT-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'zurich';
+    src: url('resources/fonts/ZurichBT-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'minion pro';
+    src: url('resources/fonts/MinionPro-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'minion pro';
+    src: url('resources/fonts/MinionPro-Italic.otf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'minion pro';
+    src: url('resources/fonts/MinionPro-Semibold.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'minion pro';
+    src: url('resources/fonts/MinionPro-Bold.otf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+}
+
+em {
+    color: #333;
+    font-family: conduit, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.stratagem h2 {
+    background-color: #666666;
+    color: #fff;
+    font-size: 1.5em;
+    font-family: conduit, sans-serif;
+    margin: 0;
+    padding: 0.25em 0.5em;
+    text-transform: uppercase;
+}
+
+.stratagem h2.strategic-ploy
+{
+    background-color: #164e4f;
+}
+
+.stratagem h2.epic-deed
+{
+    background-color: #54322d;
+}
+
+.stratagem h2.requisition
+{
+    background-color: #9c030e;
+}
+
+.stratagem h2.battle-tactic
+{
+    background-color: #163152;
+}
+
+.stratagem h2.equipment
+{
+    background-color: #496e82;
+}
+
+.stratagem .type {
+    margin: 0.25em 0.75em;
+    font-size: 1em;
+    font-weight: 700;
+    font-style: italic;
+    font-family: georgia, serif;
+}
+
+.stratagem .cost {
+    color: #fff;
+    font-family: conduit, sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    float: right;
+    padding: 0.25em 0.5em;
+    text-transform: uppercase;
+}
+
+.stratagem section p {
+    font-family: georgia, serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0.5em 0.75em;
+}
+
+.stratagem section ul {
+    margin: 0.5em 0.75em;
+}
+
+.stratagem section ul li {
+    font-family: georgia, serif;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.stratagem section > :last-child {
+    margin-bottom: 1.5em;
+}
+
+/* switch */
+
+input[type="checkbox"].switch
+{
+    display: none;
+}
+
+input[type="checkbox"].switch + label::after
+{
+	border: 0.2em solid #000;
+	border-radius: 1em;
+    color: #000;
+    content: "⬤";
+	height: 1.4em;
+	font-size: 0.6em;
+    margin-left: auto;
+	overflow: hidden;
+	padding-right: 1.4em;
+	padding-left: 0.3em;
+    position: relative;
+    top: 2px;
+}
+
+input[type="checkbox"].switch:checked + label::after
+{
+	padding-left: 1.4em;
+	padding-right: 0.3em;
+}
+
+/* setup */
+
+#setup {
+    background-color: #ddd;
+    border-radius: 0.5em;
+    bottom: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: none;
+    flex-direction: column;
+    font-family: conduit, sans-serif;
+    font-size: 1.0em;
+    height: 80%;
+    left: 10%;
+    overflow: hidden;
+    padding: 0.5em;
+    position: fixed;
+    top: 10%;
+    transition: left 200ms;
+    width: 80%;
+    z-index: 3;
+}
+
+#setup::before {
+    background-color: rgba( 0, 0, 0, 0.5);
+    content: " ";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+#setup h2 {
+    color: #000;
+    margin: 0;
+    text-transform: uppercase;
+    padding-bottom: 0.25em;
+}
+
+#setup > ol {
+    background-color: #eee;
+    color: #333;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0;
+    width: 100%;
+}
+
+#setup > ol > li > label {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+    font-size: 1.5em;
+    display: flex;
+    padding: 0.25em 0.5em;
+}
+
+#setup > ol > li > * {
+    padding: 0em 0.75em 0.75em;
+    font-size: 1em;
+    margin: 0;
+}
+
+#setup > ol > li > label + * {
+    padding-top: 0.75em;
+}
+
+#setup > ol > li > ul {
+    list-style-type: disc;
+    padding-left: 1.75em;
+}
+
+#setup-collapse
+{
+    display: none;
+}
+
+#setup-collapse:checked + #setup
+{
+    display: flex;
+}
+
+#setup-button
+{
+    background-color: #38525b;
+    background-image: url('data:image/svg+xml;base64,PHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgdmlld0JveD0iMCAtMjU2IDE3OTIgMTc5MiIKICAgdmVyc2lvbj0iMS4xIgogICB3aWR0aD0iMTAwJSIKICAgaGVpZ2h0PSIxMDAlIj4KICA8ZwogICAgIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDEyMS40OTE1MywxMjg1LjQyMzcpIgogICAgIGlkPSJnMzAyNyI+CiAgICA8cGF0aAogICAgICAgZD0ibSAxMDI0LDY0MCBxIDAsMTA2IC03NSwxODEgLTc1LDc1IC0xODEsNzUgLTEwNiwwIC0xODEsLTc1IC03NSwtNzUgLTc1LC0xODEgMCwtMTA2IDc1LC0xODEgNzUsLTc1IDE4MSwtNzUgMTA2LDAgMTgxLDc1IDc1LDc1IDc1LDE4MSB6IG0gNTEyLDEwOSBWIDUyNyBxIDAsLTEyIC04LC0yMyAtOCwtMTEgLTIwLC0xMyBsIC0xODUsLTI4IHEgLTE5LC01NCAtMzksLTkxIDM1LC01MCAxMDcsLTEzOCAxMCwtMTIgMTAsLTI1IDAsLTEzIC05LC0yMyAtMjcsLTM3IC05OSwtMTA4IC03MiwtNzEgLTk0LC03MSAtMTIsMCAtMjYsOSBsIC0xMzgsMTA4IHEgLTQ0LC0yMyAtOTEsLTM4IC0xNiwtMTM2IC0yOSwtMTg2IC03LC0yOCAtMzYsLTI4IEggNjU3IHEgLTE0LDAgLTI0LjUsOC41IFEgNjIyLC0xMTEgNjIxLC05OCBMIDU5Myw4NiBxIC00OSwxNiAtOTAsMzcgTCAzNjIsMTYgUSAzNTIsNyAzMzcsNyAzMjMsNyAzMTIsMTggMTg2LDEzMiAxNDcsMTg2IHEgLTcsMTAgLTcsMjMgMCwxMiA4LDIzIDE1LDIxIDUxLDY2LjUgMzYsNDUuNSA1NCw3MC41IC0yNyw1MCAtNDEsOTkgTCAyOSw0OTUgUSAxNiw0OTcgOCw1MDcuNSAwLDUxOCAwLDUzMSB2IDIyMiBxIDAsMTIgOCwyMyA4LDExIDE5LDEzIGwgMTg2LDI4IHEgMTQsNDYgMzksOTIgLTQwLDU3IC0xMDcsMTM4IC0xMCwxMiAtMTAsMjQgMCwxMCA5LDIzIDI2LDM2IDk4LjUsMTA3LjUgNzIuNSw3MS41IDk0LjUsNzEuNSAxMywwIDI2LC0xMCBsIDEzOCwtMTA3IHEgNDQsMjMgOTEsMzggMTYsMTM2IDI5LDE4NiA3LDI4IDM2LDI4IGggMjIyIHEgMTQsMCAyNC41LC04LjUgUSA5MTQsMTM5MSA5MTUsMTM3OCBsIDI4LC0xODQgcSA0OSwtMTYgOTAsLTM3IGwgMTQyLDEwNyBxIDksOSAyNCw5IDEzLDAgMjUsLTEwIDEyOSwtMTE5IDE2NSwtMTcwIDcsLTggNywtMjIgMCwtMTIgLTgsLTIzIC0xNSwtMjEgLTUxLC02Ni41IC0zNiwtNDUuNSAtNTQsLTcwLjUgMjYsLTUwIDQxLC05OCBsIDE4MywtMjggcSAxMywtMiAyMSwtMTIuNSA4LC0xMC41IDgsLTIzLjUgeiIKICAgICAgIHN0eWxlPSJmaWxsOiNmZmZmZmYiIC8+CiAgPC9nPgo8L3N2Zz4K');
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 2em;
+    bottom: 2.25em;
+    color: #ffffff;
+    cursor: pointer;
+    height: 1.5em;
+    position: fixed;
+    width: 1.5em;
+    right: 0.25em;
+    line-height: 1.5em;
+    font-size: 3em;
+    text-align: center;
+    font-weight: 900;
+    z-index: 2;
+}
+
+#close-setup
+{
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDMuMDIxIiBoZWlnaHQ9IjUwMy4wMjEiIHZpZXdCb3g9IjAgMCA1MDMuMDIxIDUwMy4wMjEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUwMy4wMjEgNTAzLjAyMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0ibTQ5MS42MTMgNzUuNjQzLTY0LjIzNS02NC4yMzVjLTE1LjIwMi0xNS4yMDItMzkuODU0LTE1LjIwMi01NS4wNTYgMEwyNTEuNTA3IDEzMi4yMjIgMTMwLjY4NiAxMS40MDdjLTE1LjIwMi0xNS4yMDItMzkuODUzLTE1LjIwMi01NS4wNTUgMGwtNjQuMjMgNjQuMjM2Yy0xNS4yMDIgMTUuMjAyLTE1LjIwMiAzOS44NTQgMCA1NS4wNTZsMTIwLjgyMSAxMjAuODE1TDExLjQwMSAzNzIuMzI4Yy0xNS4yMDIgMTUuMjAyLTE1LjIwMiAzOS44NTQgMCA1NS4wNTZsNjQuMjM1IDY0LjIyOWMxNS4yMDIgMTUuMjAyIDM5Ljg1NCAxNS4yMDIgNTUuMDU2IDBsMTIwLjgxNS0xMjAuODE0IDEyMC44MjIgMTIwLjgxNGMxNS4yMDIgMTUuMjAyIDM5Ljg1NCAxNS4yMDIgNTUuMDU2IDBsNjQuMjM1LTY0LjIyOWMxNS4yMDItMTUuMjAyIDE1LjIwMi0zOS44NTQgMC01NS4wNTZMMzcwLjc5MyAyNTEuNTE0bDEyMC44Mi0xMjAuODE1YzE1LjIwMi0xNS4yMDkgMTUuMjAyLTM5Ljg1NCAwLTU1LjA1NnoiLz48L3N2Zz4=');
+    background-size: 80% 80%;
+    cursor: pointer;
+    position: absolute;
+    right: 0.25em;
+    font-size: 2em;
+    top: 0.25em;
+    height: 1em;
+    width: 1em;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+}
+
+/* navigation */
+
+#sidebar {
+    background-color: #38525b;
+    bottom: 0;
+    color: #ffffff;
+    font-family: conduit;
+    font-size: 1.0em;
+    height: 100%;
+    left: -20em;
+    position: fixed;
+    top: 0;
+    transition: left 200ms;
+    width: 20em;
+    z-index: 1;
+}
+
+#sidebar a {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-bottom: 1px solid #ccc;
+    text-transform: uppercase;
+}
+
+#sidebar-collapse
+{
+    display: none;
+}
+
+#sidebar-collapse:checked + #sidebar
+{
+    left: 0;
+}
+
+#sidebar-button
+{
+    background-color: #38525b;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyAKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4KICA8cmVjdCB5PSIxMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIyMCIgcng9IjgiIHN0eWxlPSJmaWxsOiNmZmZmZmYiIC8+CiAgPHJlY3QgeT0iNDAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMjAiIHJ4PSI4IiBzdHlsZT0iZmlsbDojZmZmZmZmIiAvPgogIDxyZWN0IHk9IjcwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjIwIiByeD0iOCIgc3R5bGU9ImZpbGw6I2ZmZmZmZiIgLz4KPC9zdmc+');
+    background-size: 70% 70%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 2em;
+    bottom: 0.25em;
+    color: #ffffff;
+    cursor: pointer;
+    height: 1.5em;
+    position: fixed;
+    width: 1.5em;
+    right: 0.25em;
+    line-height: 1.5em;
+    font-size: 3em;
+    text-align: center;
+    font-weight: 900;
+    z-index: 2;
+}
+
+        </style>
+        <script type="text/javascript">
+
+$( document ).ready( function() 
+{
+    for(const stratagem of window.data.stratagems)
+    {
+        const className = stratagem.title.toLowerCase().replace(' ', '-');
+        const typeClass = stratagem.type.toLowerCase().replace(' stratagem', '').replace(' ', '-');
+        const state = window.localStorage.getItem(className) ?? true;
+
+        $( '#setup ol' ).append( '<li><input type="checkbox" class="switch" id="switch-' + className + '" autocomplete="off" ' + ( state === true ? 'checked="checked" ' : ' ' ) + '/><label for="switch-' + className + '" data-class="' + className + '">Show "' + stratagem.title + '" on the list</label>' + stratagem.description + '</li>' );
+        $( '#sidebar' ).append( '<a href="#' + className + '" class="' + className + ( state === true ? '' : ' hidden' ) + '">' + stratagem.title + '</a>' );
+
+        let html = "";
+
+        html += '<div class="stratagem ' + className + ( state === true ? '' : ' hidden' ) + '">';
+        html += '   <span class="cost">' + stratagem.min_cost + 'CP' + ( stratagem.max_cost ? '/' + stratagem.max_cost + 'CP' : '' ) + '</span>';
+        html += '   <h2 id="' + className + '" class="' + typeClass + '">' + stratagem.title + '</h2>';
+        html += '   <p class="type">' + stratagem.type + '</p>';
+        html += '   <section class="description">' + stratagem.description + '</section>';
+        html += '</div>';
+
+        $( 'article' ).append( html );
+    }
+
+    $( '#setup' ).on( 'click', 'ol label', function( e ) {
+        let className = $(this).data('class');
+        let state = $( this ).prev().prop( 'checked' );
+
+        window.localStorage.setItem( className, !state );
+        $( '.' + className ).toggleClass( 'hidden', state );
+    });
+
+    $( '#sidebar' ).on( 'click', 'a', function( e ) {
+        $( '#sidebar-collapse' ).prop( 'checked', false );
+    });
+});
+        </script>
+        <title>Stratablet</title>
+    </head>
+    <body>
+        <input type="checkbox" autocomplete="off" id="setup-collapse" />
+        <nav id="setup">
+            <h2>Stratagem configuration</h2>
+            <label id="close-setup" for="setup-collapse"></label>
+            <ol></ol>
+        </nav>
+        <input type="checkbox" autocomplete="off" id="sidebar-collapse" />
+        <nav id="sidebar"></nav>
+        <label id="sidebar-button" for="sidebar-collapse"></label>
+        <label id="setup-button" for="setup-collapse"></label>
+        <article></article>
+    </body>
+</html>
