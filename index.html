@@ -2,6 +2,7 @@
 <html lang="en" manifest="~/manifest.appcache">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script type="text/javascript" src="data/craftworlds.js"></script>
         <style type="text/css">
@@ -149,6 +150,10 @@ em {
     font-style: normal;
     font-weight: 700;
     text-transform: capitalize;
+}
+
+article {
+    padding-bottom: 6em;
 }
 
 .hidden {
@@ -304,6 +309,7 @@ input[type="checkbox"].switch:checked + label::after
     background-color: #eee;
     color: #333;
     height: 100%;
+    list-style-type: none;
     margin: 0;
     overflow-x: hidden;
     overflow-y: auto;
@@ -353,18 +359,18 @@ input[type="checkbox"].switch:checked + label::after
     background-repeat: no-repeat;
     background-position: 50% 50%;
     border-radius: 2em;
-    bottom: 2.25em;
+    bottom: 0.25em;
     color: #ffffff;
     cursor: pointer;
     height: 1.5em;
     position: fixed;
     width: 1.5em;
-    right: 0.25em;
+    right: 2em;
     line-height: 1.5em;
     font-size: 3em;
     text-align: center;
     font-weight: 900;
-    z-index: 2;
+    z-index: 1;
 }
 
 #close-setup
@@ -388,15 +394,17 @@ input[type="checkbox"].switch:checked + label::after
     background-color: #38525b;
     bottom: 0;
     color: #ffffff;
-    font-family: conduit;
+    font-family: conduit, sans-serif;
     font-size: 1.0em;
     height: 100%;
     left: -20em;
+    overflow-x: hidden;
+    overflow-y: auto;
     position: fixed;
     top: 0;
     transition: left 200ms;
     width: 20em;
-    z-index: 1;
+    z-index: 2;
 }
 
 #sidebar a {
@@ -437,7 +445,26 @@ input[type="checkbox"].switch:checked + label::after
     font-size: 3em;
     text-align: center;
     font-weight: 900;
-    z-index: 2;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+
+    article {
+        padding-bottom: 12em;
+    }
+
+    #sidebar a {
+        font-size: 2em;
+    }
+
+    #setup-button {
+        font-size: 6em;
+    }
+
+    #sidebar-button {
+        font-size: 6em;
+    }
 }
 
         </style>
