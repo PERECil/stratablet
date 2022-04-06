@@ -6,7 +6,7 @@ window.data = {
       "title": "Matchless Agility",
       "type": "Battle tactic stratagem",
       "min_cost": 1,
-      "description": "<p>Use this Stratagem in your Shooting phase, when an <em>ASURYANI</em> unit from your army	makes a Battle Focus move. Do not roll one D6 to detarmine the distance that unit can move, instead until the end of the phase, that unit can move up to 6\".</p>"
+      "description": "<p>Use this Stratagem in your Shooting phase, when an <em>ASURYANI</em> unit from your army makes a Battle Focus move. Do not roll one D6 to detarmine the distance that unit can move, instead until the end of the phase, that unit can move up to 6\".</p>"
     },
     {
       "title": "Lightning Fast Reactions",
@@ -96,7 +96,7 @@ window.data = {
       "title": "Seer Council",
       "type": "Requisition stratagem",
       "min_cost": 1,
-      "description": "<p>Use this Stratagem before the battle, when you care mustering your army. Select	one <em>FARSEER</em> model from your army and select one <em>WARLOCKS</em> unit from your army that contains 2 or more models. While that <em>FARSEER</em> model is within 6\" of that <em>WARLOCKS</em> unit, add 1 to Psychic tests taken for that <em>FARSEER</em> model. While that <em>FARSEER</em> model is within 3\" of that <em>WARLOCKS</em> unit, enemy models cannot target that <em>FARSEER</em> model with ranged attacks. You can only use this Stratagem once.</p>"
+      "description": "<p>Use this Stratagem before the battle, when you care mustering your army. Select one <em>FARSEER</em> model from your army and select one <em>WARLOCKS</em> unit from your army that contains 2 or more models. While that <em>FARSEER</em> model is within 6\" of that <em>WARLOCKS</em> unit, add 1 to Psychic tests taken for that <em>FARSEER</em> model. While that <em>FARSEER</em> model is within 3\" of that <em>WARLOCKS</em> unit, enemy models cannot target that <em>FARSEER</em> model with ranged attacks. You can only use this Stratagem once.</p>"
     },
     {
       "title": "Linked Fire",
