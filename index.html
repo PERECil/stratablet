@@ -475,7 +475,7 @@ $( document ).ready( function()
     {
         const className = stratagem.title.toLowerCase().replaceAll(' ', '-');
         const typeClass = stratagem.type.toLowerCase().replace(' stratagem', '').replaceAll(' ', '-');
-        const state = window.localStorage.getItem(className) ?? true;
+        const state = ( window.localStorage.getItem(className) ?? "true" ) === "true";
 
         $( '#setup ol' ).append( '<li><input type="checkbox" class="switch" id="switch-' + className + '" autocomplete="off" ' + ( state === true ? 'checked="checked" ' : ' ' ) + '/><label for="switch-' + className + '" data-class="' + className + '">Show "' + stratagem.title + '" on the list</label>' + stratagem.description + '</li>' );
         $( '#sidebar' ).append( '<a href="#' + className + '" class="' + className + ( state === true ? '' : ' hidden' ) + '">' + stratagem.title + '</a>' );
@@ -492,15 +492,15 @@ $( document ).ready( function()
         $( 'article' ).append( html );
     }
 
-    $( '#setup' ).on( 'click', 'ol label', function( e ) {
+    $( '#setup' ).on( 'click', 'ol label', function() {
         let className = $(this).data('class');
         let state = $( this ).prev().prop( 'checked' );
 
-        window.localStorage.setItem( className, !state );
+        window.localStorage.setItem( className, (!state).toString() );
         $( '.' + className ).toggleClass( 'hidden', state );
     });
 
-    $( '#sidebar' ).on( 'click', 'a', function( e ) {
+    $( '#sidebar' ).on( 'click', 'a', function() {
         $( '#sidebar-collapse' ).prop( 'checked', false );
     });
 });

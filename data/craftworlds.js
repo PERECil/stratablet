@@ -6,7 +6,7 @@ window.data = {
       "title": "Matchless Agility",
       "type": "Battle tactic stratagem",
       "min_cost": 1,
-      "description": "<p>Use this Stratagem in your Shooting phase, when an <em>ASURYANI</em> unit from your army makes a Battle Focus move. Do not roll one D6 to detarmine the distance that unit can move, instead until the end of the phase, that unit can move up to 6\".</p>"
+      "description": "<p>Use this Stratagem in your Shooting phase, when an <em>ASURYANI</em> unit from your army makes a Battle Focus move. Do not roll one D6 to determine the distance that unit can move, instead until the end of the phase, that unit can move up to 6\".</p>"
     },
     {
       "title": "Lightning Fast Reactions",
@@ -18,7 +18,7 @@ window.data = {
       "title": "Bladestorm",
       "type": "Battle tactic stratagem",
       "min_cost": 1,
-      "description": "<p>Use this Stratagem in the Shooting phase, when an <em>ASURYANI</em> or <em>HARLEQUINS</em> unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes an attack with a shuriken weapon, an unmoddifed hit roll of 6 scores 1 additional hit.</p>"
+      "description": "<p>Use this Stratagem in the Shooting phase, when an <em>ASURYANI</em> or <em>HARLEQUINS</em> unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes an attack with a shuriken weapon, an unmodified hit roll of 6 scores 1 additional hit.</p>"
     },
     {
       "title": "Martial Citizenry",
@@ -54,7 +54,7 @@ window.data = {
       "title": "Multifaceted Mind",
       "type": "Epic deed stratagem",
       "min_cost": 1,
-      "description": "<p>Use this Stratagem at the start of your Psychic phase after attemping to perform a psychic action with a <em>FARSEER</em>, <em>SHADOWSEER</em>, or <em>YVRAINE</em> model from your army. That unit can attempt to manifest one psychic power this phase.</p>"
+      "description": "<p>Use this Stratagem at the start of your Psychic phase after attempting to perform a psychic action with a <em>FARSEER</em>, <em>SHADOWSEER</em>, or <em>YVRAINE</em> model from your army. That unit can attempt to manifest one psychic power this phase.</p>"
     },
     {
       "title": "Battle Psykers",
@@ -66,7 +66,7 @@ window.data = {
       "title": "The Phoenix Reborn",
       "type": "Epic deed stratagem",
       "min_cost": 1,
-      "description": "<p>Use this Stratagem when a <em>PHOENIX LORD</em> model from your army is detroyed. You can choose to roll one D6 at the end of the phase instead of using any rules that are triggered when that model is detroyed. If you do so then on a 4+, set that model back up on the battlefield as close as possible to where they were destroyed and not within Engagment Range of any enemy models, with D3 wounds remaining. This Stratagem cannot be used to set the same model back up more than once per battle.</p>"
+      "description": "<p>Use this Stratagem when a <em>PHOENIX LORD</em> model from your army is destroyed. You can choose to roll one D6 at the end of the phase instead of using any rules that are triggered when that model is destroyed. If you do so then on a 4+, set that model back up on the battlefield as close as possible to where they were destroyed and not within Engagement Range of any enemy models, with D3 wounds remaining. This Stratagem cannot be used to set the same model back up more than once per battle.</p>"
     },
     {
       "title": "The Avatar Resurgent",
@@ -78,19 +78,19 @@ window.data = {
       "title": "Champion of the Aeldari",
       "type": "Requisition stratagem",
       "min_cost": 1,
-      "description": "<p>Use this Stratagem before the battle, when you are mustering your army, if your <em>WARLORD</em> has the <em>ASURYANI</em> or <em>HARLEQUINS</em> keyword. Select one <em>ASURYANI CHARACTER</em> or <em>HARLEQUINS CHARACTER</em> model from your army and determine one Warlord Trait for that model; that model is only regarde as your <em>WARLORD</em> for the purposes of that Warlord Trait. Each Warlord Trait in your army must be unique	(if randomy generated, re-roll duplicate results), and you cannot use this Stratagem to give a model two Warlord Traits. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case you can use this Stratgem twice), or an Onslaught Battle (in which case you can use this Stratagem three times).</p>"
+      "description": "<p>Use this Stratagem before the battle, when you are mustering your army, if your <em>WARLORD</em> has the <em>ASURYANI</em> or <em>HARLEQUINS</em> keyword. Select one <em>ASURYANI CHARACTER</em> or <em>HARLEQUINS CHARACTER</em> model from your army and determine one Warlord Trait for that model; that model is only regarded as your <em>WARLORD</em> for the purposes of that Warlord Trait. Each Warlord Trait in your army must be unique (if randomly generated, re-roll duplicate results), and you cannot use this Stratagem to give a model two Warlord Traits. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case you can use this Stratagem twice), or an Onslaught Battle (in which case you can use this Stratagem three times).</p>"
     },
     {
       "title": "Treasures of the Aeldari",
       "type": "Requisition stratagem",
       "min_cost": 1,
-      "description": "<p>Use this Stratagem before the battle, when you are mustering your army, if your <em>WARLORD</em> has the <em>ASURYANI</em> or <em>HARLEQUINS</em> keyword. If your <em>WARLORD</em> has the <em>HARLEQUINS</em> keyword you can select one <em>HARLEQUINS CHARACTER</em> model from your army. If your <em>WARLORD</em> has the <em>ASUYRANI</em> keyword, you can select one <em>ASURYANI CHARACTER</em> model from your army. The selected <em>CHARACTER</em> model can be given one Treasures of the Aeldari Relic (this must be a Relic they can have). Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case you can use this Stratgem twice), or an Onslaught Battle (in which case you can use this Stratagem three times).</p>"
+      "description": "<p>Use this Stratagem before the battle, when you are mustering your army, if your <em>WARLORD</em> has the <em>ASURYANI</em> or <em>HARLEQUINS</em> keyword. If your <em>WARLORD</em> has the <em>HARLEQUINS</em> keyword you can select one <em>HARLEQUINS CHARACTER</em> model from your army. If your <em>WARLORD</em> has the <em>ASURYANI</em> keyword, you can select one <em>ASURYANI CHARACTER</em> model from your army. The selected <em>CHARACTER</em> model can be given one Treasures of the Aeldari Relic (this must be a Relic they can have). Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case you can use this Stratagem twice), or an Onslaught Battle (in which case you can use this Stratagem three times).</p>"
     },
     {
       "title": "Relics of the Shrines",
       "type": "Requisition stratagem",
       "min_cost": 1,
-      "description": "<p>Use this Stratagem before the battle, when you care mustering your army, if your <em>WARLORD</em> has the <em>ASURYANI</em> keyword. Select two models in your army that have the word 'Exarch' on their profile. Each of these models can be given one Aspect Shrine Relic, this must be a Relic they could have. Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case you can use this Stratgem twice), or an Onslaught Battle (in which case you can use this Stratagem three times).</p>"
+      "description": "<p>Use this Stratagem before the battle, when you care mustering your army, if your <em>WARLORD</em> has the <em>ASURYANI</em> keyword. Select two models in your army that have the word 'Exarch' on their profile. Each of these models can be given one Aspect Shrine Relic, this must be a Relic they could have. Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case you can use this Stratagem twice), or an Onslaught Battle (in which case you can use this Stratagem three times).</p>"
     },
     {
       "title": "Seer Council",
@@ -109,7 +109,7 @@ window.data = {
       "type": "Strategic ploy stratagem",
       "min_cost": 1,
       "max_cost": 2,
-      "description": "<p>Use this Stratagem in your Movement phase, wen an <em>ASURYANI</em>, <em>HARLEQUINS</em> or <em>YNNARI</em> unit from your army Falls Back. You can select for that unit to be eligible to shoot this turn or eligible to declare a charge this turn or both. If you select both, this	Stratagm costs 2CP; otherwise, it costs 1CP.</p>"
+      "description": "<p>Use this Stratagem in your Movement phase, wen an <em>ASURYANI</em>, <em>HARLEQUINS</em> or <em>YNNARI</em> unit from your army Falls Back. You can select for that unit to be eligible to shoot this turn or eligible to declare a charge this turn or both. If you select both, this	Stratagem costs 2CP; otherwise, it costs 1CP.</p>"
     },
     {
       "title": "The Tears of Isha",
@@ -122,7 +122,7 @@ window.data = {
       "title": "Fire and Fade",
       "type": "Strategic ploy stratagem",
       "min_cost": 2,
-      "description": "<p>Use this Stratagem in your Shooting phase, after making attacks with an <em>ASURYANI</em>, <em>HARLEQUINS</em> or <em>YNNARI</em> unit (excluding <em>AIRCRAFT</em> units) from your army. That unit can immediately make a Normal Move of up to 7\". Unless that unit is a <em>HARLEQUINS</em> unit, it cannot embark within a <em>TRANSPORT</em> model at the end of this move. Until the end if the turn, that unit is not eligible to declare a charge. Units with the Battle Focus ability cannot make a Battle Focus move in a turn in whih they are selected for this Stratagem.</p>"
+      "description": "<p>Use this Stratagem in your Shooting phase, after making attacks with an <em>ASURYANI</em>, <em>HARLEQUINS</em> or <em>YNNARI</em> unit (excluding <em>AIRCRAFT</em> units) from your army. That unit can immediately make a Normal Move of up to 7\". Unless that unit is a <em>HARLEQUINS</em> unit, it cannot embark within a <em>TRANSPORT</em> model at the end of this move. Until the end if the turn, that unit is not eligible to declare a charge. Units with the Battle Focus ability cannot make a Battle Focus move in a turn in which they are selected for this Stratagem.</p>"
     },
     {
       "title": "Forewarned",
@@ -135,7 +135,7 @@ window.data = {
       "type": "Strategic ploy stratagem",
       "min_cost": 1,
       "max_cost": 3,
-      "description": "<p>Use this Stratagem before the battle, when declaring reserves and transports (if you are playing a mission without this step, use this Stratagem during deploument instead) If you spend 1CP, you can set up one <em>ASURYANI INFANTRY</em>, <em>ASURYANI BIKER</em>, <em>HARLEQUINS INFANTRY</em>, <em>HARLEQUINS BIKER</em>, <em>YNNARI INFANTRY</em>, or <em>YNNARI BIKER</em>	unit from your army in the webway instead of setting it up on the battlefield. If you spend 3CP, you can place 2 <em>ASURYANI INFANTRY</em>, <em>ASURYANI BIKER</em>, <em>HARLEQUINS INFANTRY</em>, <em>HARLEQUINS BIKER</em>, <em>YNNARI INFANTRY</em>, or <em>YNNARI BIKER</em>	units in the webway instead.</p><p>In the Reinforcements step of one of your Movement phases, you can set up any units in the webway anywhere on the battlefield, that is more than 9\" away from any enemy models You can only use this Stratagem once.</p>"
+      "description": "<p>Use this Stratagem before the battle, when declaring reserves and transports (if you are playing a mission without this step, use this Stratagem during deployment instead) If you spend 1CP, you can set up one <em>ASURYANI INFANTRY</em>, <em>ASURYANI BIKER</em>, <em>HARLEQUINS INFANTRY</em>, <em>HARLEQUINS BIKER</em>, <em>YNNARI INFANTRY</em>, or <em>YNNARI BIKER</em>	unit from your army in the webway instead of setting it up on the battlefield. If you spend 3CP, you can place 2 <em>ASURYANI INFANTRY</em>, <em>ASURYANI BIKER</em>, <em>HARLEQUINS INFANTRY</em>, <em>HARLEQUINS BIKER</em>, <em>YNNARI INFANTRY</em>, or <em>YNNARI BIKER</em>	units in the webway instead.</p><p>In the Reinforcements step of one of your Movement phases, you can set up any units in the webway anywhere on the battlefield, that is more than 9\" away from any enemy models You can only use this Stratagem once.</p>"
     },
     {
       "title": "Phantasm",
@@ -147,7 +147,7 @@ window.data = {
       "title": "Eldritch Storm",
       "type": "Strategic ploy stratagem",
       "min_cost": 3,
-      "description": "<p>Use this Stratagem in your Shooting phase, if a <em>FARSEER</em> model from your army is on the battlefield. Select one point on the battlefield within 24\" of a <em>FARSEER</em> model from your army and place a marker on that point. In your next Psychic phase, <em>FARSEER</em> models from your army that are within 24\" of that marker can perform the following psychic action:</p><p>Empower Storm (Psychic Action - Warp Charge 5): Any number of <em>FARSEER</em> models	from your army can attempt to perform this psychic action.</p><p>At the start of your next Shooting phase, roll one D6 for each unit within 6\" of the centre of the marker you placed, subtracting 2 if the unit being rolled for is an <em>INFANTRY CHARACTER</em> unit. On a 2+, that unit suffes D3 mortal wounds and an additional 1 mortal wound for each time the Empower Storm psychic action was successfully completed this turn. That marker is then removed. You can only use this Stratagem once.</p>"
+      "description": "<p>Use this Stratagem in your Shooting phase, if a <em>FARSEER</em> model from your army is on the battlefield. Select one point on the battlefield within 24\" of a <em>FARSEER</em> model from your army and place a marker on that point. In your next Psychic phase, <em>FARSEER</em> models from your army that are within 24\" of that marker can perform the following psychic action:</p><p>Empower Storm (Psychic Action - Warp Charge 5): Any number of <em>FARSEER</em> models	from your army can attempt to perform this psychic action.</p><p>At the start of your next Shooting phase, roll one D6 for each unit within 6\" of the centre of the marker you placed, subtracting 2 if the unit being rolled for is an <em>INFANTRY CHARACTER</em> unit. On a 2+, that unit suffers D3 mortal wounds and an additional 1 mortal wound for each time the \"Empower Storm\" psychic action was successfully completed this turn. That marker is then removed. You can only use this Stratagem once.</p>"
     },
     {
       "title": "Wireweave Grenades",
@@ -171,7 +171,7 @@ window.data = {
       "title": "Starhawk Missile",
       "type": "Equipment stratagem",
       "min_cost": 1,
-      "description": "<p>Use this Stratagem in your Shooting phase, when an <em>ASURYANI</em> model from your army targets an <em>AIRCRAFT</em> unit with an Aeldari Missle Launcher. That model can only make one attack with that weapon this phase, but when resolving that attack, add 1 to that attack's hit roll. If a hit is scored. the target suffers 2D3 mortal wounds and the attack sequence ends.</p>"
+      "description": "<p>Use this Stratagem in your Shooting phase, when an <em>ASURYANI</em> model from your army targets an <em>AIRCRAFT</em> unit with an Aeldari Missile Launcher. That model can only make one attack with that weapon this phase, but when resolving that attack, add 1 to that attack's hit roll. If a hit is scored. the target suffers 2D3 mortal wounds and the attack sequence ends.</p>"
     },
     {
       "title": "Resonator Shard",
@@ -189,7 +189,7 @@ window.data = {
       "title": "Discipline of the Black Guardians",
       "type": "Ulthwé stratagem",
       "min_cost": 1,
-      "description": "<p>Use this Stratagem in your Shooting phase or the Fight phase, when you select an <em>ULTHWE GUARDIANS</em> unit to shoot or fight. Until the end of the phase, each time a model in that unit makes an attack, add 1 to that attack's hit roll.</p>"
+      "description": "<p>Use this Stratagem in your Shooting phase or the Fight phase, when you select an <em>ULTHWÉ GUARDIANS</em> unit to shoot or fight. Until the end of the phase, each time a model in that unit makes an attack, add 1 to that attack's hit roll.</p>"
     },
     {
       "title": "Warriors of the Raging Winds",
@@ -201,7 +201,7 @@ window.data = {
       "title": "Wrath of the Shrines",
       "type": "Biel-tan stratagem",
       "min_cost": 1,
-      "description": "<p>Use this Stratagem in your Shooting phase or the Fight phase, when a <em>BIEL-TAN ASPECT WARRIOR</em> unit from your army is selected to shoot or fight. Until the end of the phase, each time a model in that unit makes an attack, an unmoddifed hit roll of 6 scores 1 additional hit.</p>"
+      "description": "<p>Use this Stratagem in your Shooting phase or the Fight phase, when a <em>BIEL-TAN ASPECT WARRIOR</em> unit from your army is selected to shoot or fight. Until the end of the phase, each time a model in that unit makes an attack, an unmodified hit roll of 6 scores 1 additional hit.</p>"
     },
     {
       "title": "Pathfinder Ambush",
