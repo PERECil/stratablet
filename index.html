@@ -190,7 +190,7 @@ article {
     background-color: #163152;
 }
 
-.stratagem h2.equipment
+.stratagem h2.wargear
 {
     background-color: #496e82;
 }
@@ -485,7 +485,7 @@ $( document ).ready( function()
         html += '<div class="stratagem ' + className + ( state === true ? '' : ' hidden' ) + '">';
         html += '   <span class="cost">' + stratagem.min_cost + 'CP' + ( stratagem.max_cost ? '/' + stratagem.max_cost + 'CP' : '' ) + '</span>';
         html += '   <h2 id="' + className + '" class="' + typeClass + '">' + stratagem.title + '</h2>';
-        html += '   <p class="type">' + stratagem.type + '</p>';
+        html += '   <p class="type">' + stratagem.type + ( stratagem.specialism === null ? '' : ' - ' + stratagem.specialism ) +  '</p>';
         html += '   <section class="description">' + stratagem.description + '</section>';
         html += '</div>';
 
