@@ -1,4 +1,4 @@
-window.data = {
+window.data.push( {
     "group": "Xenos",
     "faction": "Aeldari - Craftworlds",
     "stratagems": [
@@ -534,4 +534,4 @@ window.data = {
             "description": "<p>Use this Stratagem in your Shooting phase or the Fight phase, when a <em>BIEL-TAN<\/em> <em>ASPECT<\/em> <em>WARRIOR<\/em> unit from your army is selected to shoot or fight. Until the end of the phase, each time a model in that unit makes an attack, an unmodified hit roll of 6 scores 1 additional hit.<\/p>"
         }
     ]
-}
+});

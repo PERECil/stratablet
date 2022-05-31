@@ -4,7 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript">
+window.data = [];        
+        </script>
         <script type="text/javascript" src="data/craftworlds.js"></script>
+        <script type="text/javascript" src="data/spacemarines.js"></script>
         <style type="text/css">
 
 @font-face {
@@ -305,6 +309,39 @@ input[type="checkbox"].switch:checked + label::after
     padding-bottom: 0.25em;
 }
 
+#setup nav {
+    display: flex;
+    flex-direction: row;
+}
+
+#setup nav input[type="radio"] {
+    display: none;
+}
+
+#setup nav label {
+    border-radius: 0.5em;
+    cursor: pointer;
+    height: 4em;
+    margin-bottom: 0.5em;
+    margin-right: 0.5em;
+    width: 4em;
+}
+
+#setup nav input[type="radio"]:checked + label {
+    background-color: #ccc;
+}
+
+#setup nav label img {
+    height: 3em;
+    margin: 0.5em;
+    width: 3em;
+}
+
+#setup nav div span {
+    display: none;
+    text-align: center;
+}
+
 #setup > ol {
     background-color: #eee;
     color: #333;
@@ -471,25 +508,32 @@ input[type="checkbox"].switch:checked + label::after
 
 $( document ).ready( function() 
 {
-    for(const stratagem of window.data.stratagems)
-    {
-        const className = stratagem.title.toLowerCase().replaceAll(' ', '-');
-        const typeClass = stratagem.type.toLowerCase().replace(' stratagem', '').replaceAll(' ', '-');
-        const state = ( window.localStorage.getItem(className) ?? "true" ) === "true";
+    function loadStratagems(data) {
 
-        $( '#setup ol' ).append( '<li><input type="checkbox" class="switch" id="switch-' + className + '" autocomplete="off" ' + ( state === true ? 'checked="checked" ' : ' ' ) + '/><label for="switch-' + className + '" data-class="' + className + '">Show "' + stratagem.title + '" on the list</label>' + stratagem.description + '</li>' );
-        $( '#sidebar' ).append( '<a href="#' + className + '" class="' + className + ( state === true ? '' : ' hidden' ) + '">' + stratagem.title + '</a>' );
+        $( '#setup ol' ).html('');
+        $( '#sidebar' ).html('');
+        $('article').html('');
 
-        let html = "";
+        for(const stratagem of data.stratagems)
+        {
+            const className = stratagem.title.toLowerCase().replaceAll(' ', '-');
+            const typeClass = stratagem.type.toLowerCase().replace(' stratagem', '').replaceAll(' ', '-');
+            const state = ( window.localStorage.getItem(className) ?? "true" ) === "true";
 
-        html += '<div class="stratagem ' + className + ( state === true ? '' : ' hidden' ) + '">';
-        html += '   <span class="cost">' + stratagem.min_cost + 'CP' + ( stratagem.max_cost ? '/' + stratagem.max_cost + 'CP' : '' ) + '</span>';
-        html += '   <h2 id="' + className + '" class="' + typeClass + '">' + stratagem.title + '</h2>';
-        html += '   <p class="type">' + stratagem.type + ( stratagem.specialism === null ? '' : ' - ' + stratagem.specialism ) +  '</p>';
-        html += '   <section class="description">' + stratagem.description + '</section>';
-        html += '</div>';
+            $( '#setup ol' ).append( '<li><input type="checkbox" class="switch" id="switch-' + className + '" autocomplete="off" ' + ( state === true ? 'checked="checked" ' : ' ' ) + '/><label for="switch-' + className + '" data-class="' + className + '">Show "' + stratagem.title + '" on the list</label>' + stratagem.description + '</li>' );
+            $( '#sidebar' ).append( '<a href="#' + className + '" class="' + className + ( state === true ? '' : ' hidden' ) + '">' + stratagem.title + '</a>' );
 
-        $( 'article' ).append( html );
+            let html = "";
+
+            html += '<div class="stratagem ' + className + ( state === true ? '' : ' hidden' ) + '">';
+            html += '   <span class="cost">' + stratagem.min_cost + 'CP' + ( stratagem.max_cost ? '/' + stratagem.max_cost + 'CP' : '' ) + '</span>';
+            html += '   <h2 id="' + className + '" class="' + typeClass + '">' + stratagem.title + '</h2>';
+            html += '   <p class="type">' + stratagem.type + ( stratagem.specialism === null ? '' : ' - ' + stratagem.specialism ) +  '</p>';
+            html += '   <section class="description">' + stratagem.description + '</section>';
+            html += '</div>';
+
+            $( 'article' ).append( html );
+        }
     }
 
     $( '#setup' ).on( 'click', 'ol label', function() {
@@ -503,6 +547,17 @@ $( document ).ready( function()
     $( '#sidebar' ).on( 'click', 'a', function() {
         $( '#sidebar-collapse' ).prop( 'checked', false );
     });
+
+    $( '#setup [data-source]' ).on('click', function() {
+        window.localStorage.setItem('faction', $(this).data('source'));
+        loadStratagems(window.data[$(this).data('source')]);
+    });
+
+    const selectedFaction = parseInt( ( window.localStorage.getItem('faction') ?? "0" ), 10);
+
+    $( '#setup input[type="radio"]:eq(' + selectedFaction + ')' ).prop( 'checked', true );
+
+    loadStratagems(window.data[selectedFaction]);
 });
         </script>
         <title>Stratablet</title>
@@ -512,6 +567,18 @@ $( document ).ready( function()
         <nav id="setup">
             <h2>Stratagem configuration</h2>
             <label id="close-setup" for="setup-collapse"></label>
+            <nav>
+                <input type="radio" name="faction" id="faction-aeldari" autocomplete="off" />
+                <label for="faction-aeldari" data-source="0">
+                    <img src="resources/img/factions/aeldari.svg" title="Aeldari" />
+                    <span>Aeldari</span>
+                </label>
+                <input type="radio" name="faction" id="faction-space-marines" autocomplete="off" />
+                <label for="faction-space-marines" data-source="1">
+                    <img src="resources/img/factions/adeptus_astartes.svg" title="Space marines" />
+                    <span>Space marines</span>
+                </label>
+            </nav>
             <ol></ol>
         </nav>
         <input type="checkbox" autocomplete="off" id="sidebar-collapse" />
