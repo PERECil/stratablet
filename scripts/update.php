@@ -71,3 +71,4 @@ function leech(string $group, string $faction, string $path, string $url)
 
 leech( 'Xenos', 'Aeldari - Craftworlds', '../data/craftworlds.js', 'https://wahapedia.ru/wh40k9ed/factions/aeldari/#Stratagems');
 leech( 'Imperium', 'Space Marines', '../data/spacemarines.js', 'https://wahapedia.ru/wh40k9ed/factions/space-marines/#Stratagems');
+leech( 'Xenos', 'T\'au Empire', '../data/tau.js', 'https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Stratagems');
