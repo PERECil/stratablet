@@ -1,15 +1,16 @@
 window.data.push( {
     "group": "Xenos",
     "faction": "Aeldari - Craftworlds",
+    "id": "aeldari-craftworlds",
     "stratagems": [
         {
             "title": "A Deadly Embrace",
-            "specialism": "Aeldari (Harlequins)",
+            "specialism": "Harlequins",
             "type": "Wargear stratagem",
             "min_cost": 1,
             "max_cost": null,
             "fluff": "As the Harlequins close with their foe, those equipped with a Harlequin's embrace create a delicate web of monofilament. These wires envelop their foe before contracting, slicing them apart.",
-            "description": "<p>Use this Stratagem after a <em>HARLEQUIN\u2019S<\/em> <em>EMBRACE<\/em> unit from your army makes a charge move or performs a Heroic Intervention. Select one enemy unit (excluding VEHICLE or MONSTER units) within Engagement Range of that unit and roll one D6 for each model in that HARLEQUIN\u2019S EMBRACE unit. For each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).<\/p>"
+            "description": "<p>Use this Stratagem after a <em>HARLEQUIN\u2019S<\/em> <em>EMBRACE<\/em> unit from your army makes a charge move or performs a Heroic Intervention. Select one enemy unit (excluding <em>VEHICLE<\/em> or <em>MONSTER<\/em> units) within Engagement Range of that unit and roll one D6 for each model in that <em>HARLEQUIN\u2019S<\/em> <em>EMBRACE<\/em> unit. For each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).<\/p>"
         },
         {
             "title": "Avengers Of Asuryan",
@@ -49,12 +50,12 @@ window.data.push( {
         },
         {
             "title": "Cegorach\u2019s Jest",
-            "specialism": "Aeldari (Harlequins)",
+            "specialism": "Harlequins",
             "type": "Battle tactic stratagem",
             "min_cost": 1,
             "max_cost": 2,
             "fluff": "The Dance of Cegorach's Jest sees enemy units harried mercilessly unto their absolute destruction.",
-            "description": "<p>Use this Stratagem in your opponent\u2019s Movement phase, when an enemy unit within Engagement Range of a <em>HARLEQUINS<\/em> <em>INFANTRY<\/em> unit from your army Falls Back. After that enemy unit has finished that move, select one HARLEQUINS INFANTRY unit from your army that was within Engagement Range of that enemy unit at the start of the phase. The selected unit can either consolidate up to 6\" or shoot as if it were your Shooting phase. If the selected unit shoots, it can only target that enemy unit. If the selected unit consolidates, this Stratagem costs 2CP; otherwise, it costs 1 CP.<\/p>"
+            "description": "<p>Use this Stratagem in your opponent\u2019s Movement phase, when an enemy unit within Engagement Range of a <em>HARLEQUINS<\/em> <em>INFANTRY<\/em> unit from your army Falls Back. After that enemy unit has finished that move, select one <em>HARLEQUINS<\/em> <em>INFANTRY<\/em> unit from your army that was within Engagement Range of that enemy unit at the start of the phase. The selected unit can either consolidate up to 6\" or shoot as if it were your Shooting phase. If the selected unit shoots, it can only target that enemy unit. If the selected unit consolidates, this Stratagem costs 2CP; otherwise, it costs 1 CP.<\/p>"
         },
         {
             "title": "Champion Of The Aeldari",
@@ -63,7 +64,7 @@ window.data.push( {
             "min_cost": 1,
             "max_cost": null,
             "fluff": "The Aeldari race harbours innumerable warriors of superb skill and tactical expertise.",
-            "description": "<p>Use this Stratagem before the battle, when you are mustering your army, if your WARLORD has the ASURYANI or HARLEQUINS keyword. Select one <em>ASURYANI<\/em> <em>CHARACTER<\/em> or <em>HARLEQUINS<\/em> <em>CHARACTER<\/em> model from your army and determine one Warlord Trait for that model; that model is only regarded as your WARLORD for the purposes of that Warlord Trait. Each Warlord Trait in your army must be unique (if randomly generated, re-roll duplicate results), and you cannot use this Stratagem to give a model two Warlord Traits. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case you can use this Stratagem twice), or an Onslaught battle (in which case you can use this Stratagem three times).<\/p>"
+            "description": "<p>Use this Stratagem before the battle, when you are mustering your army, if your <em>WARLORD<\/em> has the <em>ASURYANI<\/em> or <em>HARLEQUINS<\/em> keyword. Select one <em>ASURYANI<\/em> <em>CHARACTER<\/em> or <em>HARLEQUINS<\/em> <em>CHARACTER<\/em> model from your army and determine one Warlord Trait for that model; that model is only regarded as your <em>WARLORD<\/em> for the purposes of that Warlord Trait. Each Warlord Trait in your army must be unique (if randomly generated, re-roll duplicate results), and you cannot use this Stratagem to give a model two Warlord Traits. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case you can use this Stratagem twice), or an Onslaught battle (in which case you can use this Stratagem three times).<\/p>"
         },
         {
             "title": "Defiant To The Last",
@@ -85,7 +86,7 @@ window.data.push( {
         },
         {
             "title": "Dramatic Entrance",
-            "specialism": "Aeldari (Harlequins)",
+            "specialism": "Harlequins",
             "type": "Epic deed stratagem",
             "min_cost": 1,
             "max_cost": null,
@@ -99,16 +100,16 @@ window.data.push( {
             "min_cost": 3,
             "max_cost": null,
             "fluff": "The Farseers of the Asuryani are capable of generating vast psychic storms that can toss heavily armoured troops around like leaves.",
-            "description": "<p>Use this Stratagem in your Command phase, if a <em>FARSEER<\/em> model from your army is on the battlefield. Select one point on the battlefield within 24\" of a FARSEER model from your army and place a marker on that point. In your next Psychic phase, FARSEER models from your army that are within 24\" of that marker can perform the following psychic action:Empower Storm (Psychic Action - Warp Charge 5): Any number of FARSEER models from your army can attempt to perform this psychic action.At the start of your next Shooting phase, roll one D6 for each unit within 6\" of the centre of the marker you placed, subtracting 2 if the unit being rolled for is an INFANTRY CHARACTER unit. On a 2+, that unit suffers D3 mortal wounds and an additional 1 mortal wound for each time the Empower Storm psychic action was successfully completed this turn. That marker is then removed. You can only use this Stratagem once.<\/p>"
+            "description": "<p>Use this Stratagem in your Command phase, if a <em>FARSEER<\/em> model from your army is on the battlefield. Select one point on the battlefield within 24\" of a <em>FARSEER<\/em> model from your army and place a marker on that point. In your next Psychic phase, <em>FARSEER<\/em> models from your army that are within 24\" of that marker can perform the following psychic action:Empower Storm (Psychic Action - Warp Charge 5): Any number of <em>FARSEER<\/em> models from your army can attempt to perform this psychic action.At the start of your next Shooting phase, roll one D6 for each unit within 6\" of the centre of the marker you placed, subtracting 2 if the unit being rolled for is an <em>INFANTRY<\/em> <em>CHARACTER<\/em> unit. On a 2+, that unit suffers D3 mortal wounds and an additional 1 mortal wound for each time the Empower Storm psychic action was successfully completed this turn. That marker is then removed. You can only use this Stratagem once.<\/p>"
         },
         {
             "title": "Favoured Of The Laughing God",
-            "specialism": "Aeldari (Harlequins)",
+            "specialism": "Harlequins",
             "type": "Requisition stratagem",
             "min_cost": 1,
             "max_cost": null,
             "fluff": "One amongst the masque seems different this day, their presence magnified, their skill sublime. Who - or what - now lurks behind their mask?",
-            "description": "<p>Use this Stratagem after nominating a <em>HARLEQUINS<\/em> model (excluding named characters) to be your WARLORD. That model gains one additional Warlord Trait; this must be from the Harlequins Warlord Traits table. Each Warlord Trait in your army must be unique (if randomly generated, re-roll duplicate results). You can only use this Stratagem once.<\/p>"
+            "description": "<p>Use this Stratagem after nominating a <em>HARLEQUINS<\/em> model (excluding named characters) to be your <em>WARLORD<\/em>. That model gains one additional Warlord Trait; this must be from the Harlequins Warlord Traits table. Each Warlord Trait in your army must be unique (if randomly generated, re-roll duplicate results). You can only use this Stratagem once.<\/p>"
         },
         {
             "title": "Feigned Retreat",
@@ -126,7 +127,7 @@ window.data.push( {
             "min_cost": 2,
             "max_cost": null,
             "fluff": "The Aeldari are masters at using hit and run tactics, engaging a target with a flurry of shots before quickly manoeuvring into cover or out of sight.",
-            "description": "<p>Use this Stratagem in your Shooting phase, after making attacks with an <em>ASURYANI<\/em>, <em>HARLEQUINS<\/em> or <em>YNNARI<\/em> unit (excluding <em>AIRCRAFT<\/em> units) from your army. That unit can immediately make a Normal Move of up to 7\". Unless that unit is a HARLEQUINS unit, it cannot embark within a <em>TRANSPORT<\/em> model at the end of this move. Until the end of the turn, that unit is not eligible to declare a charge. Units with the Battle Focus ability cannot make a Battle Focus move in a turn in which they are selected for this Stratagem.<\/p>"
+            "description": "<p>Use this Stratagem in your Shooting phase, after making attacks with an <em>ASURYANI<\/em>, <em>HARLEQUINS<\/em> or <em>YNNARI<\/em> unit (excluding <em>AIRCRAFT<\/em> units) from your army. That unit can immediately make a Normal Move of up to 7\". Unless that unit is a <em>HARLEQUINS<\/em> unit, it cannot embark within a <em>TRANSPORT<\/em> model at the end of this move. Until the end of the turn, that unit is not eligible to declare a charge. Units with the Battle Focus ability cannot make a Battle Focus move in a turn in which they are selected for this Stratagem.<\/p>"
         },
         {
             "title": "Fire And Reposition",
@@ -153,7 +154,7 @@ window.data.push( {
             "min_cost": 1,
             "max_cost": null,
             "fluff": "The Fire Dragons are skilled in the placement of fusion charges - grenade-sized explosives that produce a blast of intense heat when locked onto enemy war machines, reducing armour to vapour.",
-            "description": "<p>Use this Stratagem in the Fight phase, when a <em>FIRE<\/em> <em>DRAGONS<\/em> unit from your army is selected to fight. Select one model in that unit; that model can only make one attack this phase, and must target an enemy VEHICLE unit with that attack, but if a hit is scored, that VEHICLE unit suffers 2D3 mortal wounds and the attack sequence ends.<\/p>"
+            "description": "<p>Use this Stratagem in the Fight phase, when a <em>FIRE<\/em> <em>DRAGONS<\/em> unit from your army is selected to fight. Select one model in that unit; that model can only make one attack this phase, and must target an enemy <em>VEHICLE<\/em> unit with that attack, but if a hit is scored, that <em>VEHICLE<\/em> unit suffers 2D3 mortal wounds and the attack sequence ends.<\/p>"
         },
         {
             "title": "Grenade Pack",
@@ -162,7 +163,7 @@ window.data.push( {
             "min_cost": 1,
             "max_cost": null,
             "fluff": "Swooping Hawks utilise complex grenade packs as they swoop across the battlefield. Enemies who find themselves under their path are showered with explosive plasma grenades.",
-            "description": "<p>Use this Stratagem in your Movement phase, after a <em>SWOOPING<\/em> <em>HAWKS<\/em> unit from your army makes a Normal Move or Advances. Select one enemy unit that any models in that SWOOPING HAWKS unit moved across this phase. Roll one D6 for each model in that SWOOPING HAWKS unit, subtracting 1 if that selected enemy unit has the CHARACTER keyword (excluding VEHICLE or MONSTER units). For each 4+, that selected enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).<\/p>"
+            "description": "<p>Use this Stratagem in your Movement phase, after a <em>SWOOPING<\/em> <em>HAWKS<\/em> unit from your army makes a Normal Move or Advances. Select one enemy unit that any models in that <em>SWOOPING<\/em> <em>HAWKS<\/em> unit moved across this phase. Roll one D6 for each model in that <em>SWOOPING<\/em> <em>HAWKS<\/em> unit, subtracting 1 if that selected enemy unit has the <em>CHARACTER<\/em> keyword (excluding <em>VEHICLE<\/em> or <em>MONSTER<\/em> units). For each 4+, that selected enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).<\/p>"
         },
         {
             "title": "Guided Wraithsight",
@@ -171,25 +172,25 @@ window.data.push( {
             "min_cost": 1,
             "max_cost": null,
             "fluff": "When the armies of Craftworld Iyanden march to battle, their ghost warriors are at the centre. Amongst these wraith constructs walk the Spiritseers, their minds bridging the gap between the real world and the spirit realm.",
-            "description": "<p>Use this Stratagem in your Shooting phase or the Fight phase. Select one <em>IYANDEN<\/em> <em>SPIRITSEER<\/em> model from your army and one friendly <em>IYANDEN<\/em> <em>SPIRIT<\/em> <em>HOST<\/em> unit. Until the end of the phase, that SPIRIT HOST unit is considered to be within range of that SPIRITSEER model\u2019s Spirit Mark ability.<\/p>"
+            "description": "<p>Use this Stratagem in your Shooting phase or the Fight phase. Select one <em>IYANDEN<\/em> <em>SPIRITSEER<\/em> model from your army and one friendly <em>IYANDEN<\/em> <em>SPIRIT<\/em> <em>HOST<\/em> unit. Until the end of the phase, that <em>SPIRIT<\/em> <em>HOST<\/em> unit is considered to be within range of that <em>SPIRITSEER<\/em> model\u2019s Spirit Mark ability.<\/p>"
         },
         {
             "title": "Haywire Charges",
-            "specialism": "Aeldari (Harlequins)",
+            "specialism": "Harlequins",
             "type": "Wargear stratagem",
             "min_cost": 1,
             "max_cost": null,
             "fluff": "Haywire grenades send out a powerful electromagnetic pulse that can cripple enemy vehicles.",
-            "description": "<p>Use this Stratagem in your Shooting phase, when a <em>HARLEQUINS<\/em> <em>HAYWIRE<\/em> <em>GRENADE<\/em> unit from your army is selected to shoot. Select one model in that unit; that model can only make one attack this phase, and must target an enemy VEHICLE unit within 6\" of it, but if a hit is scored, that VEHICLE unit suffers D3 mortal wounds and the attack sequence ends.<\/p>"
+            "description": "<p>Use this Stratagem in your Shooting phase, when a <em>HARLEQUINS<\/em> <em>HAYWIRE<\/em> <em>GRENADE<\/em> unit from your army is selected to shoot. Select one model in that unit; that model can only make one attack this phase, and must target an enemy <em>VEHICLE<\/em> unit within 6\" of it, but if a hit is scored, that <em>VEHICLE<\/em> unit suffers D3 mortal wounds and the attack sequence ends.<\/p>"
         },
         {
             "title": "Heroes\u2019 Path",
-            "specialism": "Aeldari (Harlequins)",
+            "specialism": "Harlequins",
             "type": "Epic deed stratagem",
             "min_cost": 1,
             "max_cost": null,
             "fluff": "The Dance of the Heroes' Path depicts how overbearing pride led Eldanesh and Ulthanash on a deadly quest into the den of the Prince of the Ygghs.",
-            "description": "<p>Use this Stratagem at the start of your Command phase. Select one <em>TROUPE<\/em> <em>MASTER<\/em> model from your army that is on the battlefield, and select one <em>DEATH<\/em> <em>JESTER<\/em> or <em>SHADOWSEER<\/em> model from your army that is on the battlefield. Until the end of the turn:Add 2\" to the Movement characteristic of the selected models.Each time a charge roll is made for any of the selected models, add 1 to the result.<\/p>"
+            "description": "<p>Use this Stratagem at the start of your Command phase. Select one <em>TROUPE<\/em> <em>MASTER<\/em> model from your army that is on the battlefield, and select one <em>DEATH<\/em> <em>JESTER<\/em> or <em>SHADOWSEER<\/em> model from your army that is on the battlefield. Until the end of the turn:<ul><li>Add 2\" to the Movement characteristic of the selected models.<\/li><li>Each time a charge roll is made for any of the selected models, add 1 to the result.<\/li><\/ul><\/p>"
         },
         {
             "title": "Inevitable Fate",
@@ -207,11 +208,11 @@ window.data.push( {
             "min_cost": 2,
             "max_cost": null,
             "fluff": "Few Aeldari harbour as much hatred for Chaos in all its guises as those of Altansar. They have seen what horrors it is capable of, and all have experienced great loss to it in one form or another.",
-            "description": "<p>Use this Stratagem in the Fight phase, when an <em>ALTANSAR<\/em> unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes a melee attack against a DAEMON unit (excluding VEHICLE and MONSTER units), add 1 to that attack\u2019s wound roll.<\/p>"
+            "description": "<p>Use this Stratagem in the Fight phase, when an <em>ALTANSAR<\/em> unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes a melee attack against a <em>DAEMON<\/em> unit (excluding <em>VEHICLE<\/em> and <em>MONSTER<\/em> units), add 1 to that attack\u2019s wound roll.<\/p>"
         },
         {
             "title": "Kiss Of Death",
-            "specialism": "Aeldari (Harlequins)",
+            "specialism": "Harlequins",
             "type": "Wargear stratagem",
             "min_cost": 1,
             "max_cost": null,
@@ -234,7 +235,7 @@ window.data.push( {
             "min_cost": 2,
             "max_cost": null,
             "fluff": "Fire Prisms can combine their destructive power to unleash all-powerful beams of laser energy.",
-            "description": "<p>Use this Stratagem at the start of your Shooting phase. Select one <em>FIRE<\/em> <em>PRISM<\/em> model from your army, then select one or two other friendly FIRE PRISM models within 12\" of and visible to that model. Until the end of the phase, each time the first FIRE PRISM model you selected shoots using the focused lance profile of its prism cannon:That model makes 2 additional attacks with that weapon (using that weapon\u2019s focused lance profile) for each other FIRE PRISM model you selected.Invulnerable saving throws cannot be made against any attacks made by that model with that weapon.Until the end of the phase, each other FIRE PRISM model you selected cannot make any attacks with its prism cannon.<\/p>"
+            "description": "<p>Use this Stratagem at the start of your Shooting phase. Select one <em>FIRE<\/em> <em>PRISM<\/em> model from your army, then select one or two other friendly <em>FIRE<\/em> <em>PRISM<\/em> models within 12\" of and visible to that model. Until the end of the phase, each time the first <em>FIRE<\/em> <em>PRISM<\/em> model you selected shoots using the focused lance profile of its prism cannon:<ul><li>That model makes 2 additional attacks with that weapon (using that weapon\u2019s focused lance profile) for each other <em>FIRE<\/em> <em>PRISM<\/em> model you selected.<\/li><li>Invulnerable saving throws cannot be made against any attacks made by that model with that weapon.<\/li><\/ul>Until the end of the phase, each other <em>FIRE<\/em> <em>PRISM<\/em> model you selected cannot make any attacks with its prism cannon.<\/p>"
         },
         {
             "title": "Malicious Frenzy",
@@ -265,12 +266,12 @@ window.data.push( {
         },
         {
             "title": "Mocking Laughter",
-            "specialism": "Aeldari (Harlequins)",
+            "specialism": "Harlequins",
             "type": "Strategic ploy stratagem",
             "min_cost": 1,
             "max_cost": null,
             "fluff": "Often the last thing the foes of the Harlequins hear is the echoing laughter of a Death Jester, taking great delight in their misfortune.",
-            "description": "<p>Use this Stratagem at the start of the Morale phase. Select one enemy unit within 12\" of a <em>DEATH<\/em> <em>JESTER<\/em> model from your army. Until the end of the phase:Your opponent cannot select that unit for the Insane Bravery Stratagem, nor can they use any rule that would let them re-roll a Morale test for that unit.If a Morale test taken for that unit is failed, any action that unit is performing immediately fails.<\/p>"
+            "description": "<p>Use this Stratagem at the start of the Morale phase. Select one enemy unit within 12\" of a <em>DEATH<\/em> <em>JESTER<\/em> model from your army. Until the end of the phase:<ul><li>Your opponent cannot select that unit for the Insane Bravery Stratagem, nor can they use any rule that would let them re-roll a Morale test for that unit.<\/li><li>If a Morale test taken for that unit is failed, any action that unit is performing immediately fails.<\/li><\/ul><\/p>"
         },
         {
             "title": "Multifaceted Mind",
@@ -283,7 +284,7 @@ window.data.push( {
         },
         {
             "title": "Murderous Spectacle",
-            "specialism": "Aeldari (Harlequins)",
+            "specialism": "Harlequins",
             "type": "Battle tactic stratagem",
             "min_cost": 2,
             "max_cost": null,
@@ -292,16 +293,16 @@ window.data.push( {
         },
         {
             "title": "No Price Too Steep",
-            "specialism": "Aeldari (Harlequins)",
+            "specialism": "Harlequins",
             "type": "Epic deed stratagem",
             "min_cost": 2,
             "max_cost": null,
             "fluff": "Death is seen as just another sacrifice to the Harlequins, one they are ever willing to make in order to defeat the scourge of Chaos once and for all.",
-            "description": "<p>Use this Stratagem in the Fight phase, when a <em>HARLEQUINS<\/em> <em>CHARACTER<\/em> model from your army that has not already been selected to fight this phase is destroyed. Do not remove that model from play - it can fight after the attacking model\u2019s unit has finished making attacks. If that model is a <em>SOLITAIRE<\/em> model, or was destroyed by a CHAOS unit, until the end of the phase, add 1 to that model\u2019s Attacks and Strength characteristics. After resolving the destroyed model\u2019s attacks, it is then removed.<\/p>"
+            "description": "<p>Use this Stratagem in the Fight phase, when a <em>HARLEQUINS<\/em> <em>CHARACTER<\/em> model from your army that has not already been selected to fight this phase is destroyed. Do not remove that model from play - it can fight after the attacking model\u2019s unit has finished making attacks. If that model is a <em>SOLITAIRE<\/em> model, or was destroyed by a <em>CHAOS<\/em> unit, until the end of the phase, add 1 to that model\u2019s Attacks and Strength characteristics. After resolving the destroyed model\u2019s attacks, it is then removed.<\/p>"
         },
         {
             "title": "Oblivion\u2019s Caress",
-            "specialism": "Aeldari (Harlequins)",
+            "specialism": "Harlequins",
             "type": "Wargear stratagem",
             "min_cost": 2,
             "max_cost": null,
@@ -315,7 +316,7 @@ window.data.push( {
             "min_cost": 1,
             "max_cost": null,
             "fluff": "While the bulk of the Alaitoc warhost engages the foe, small forces of Rangers and Pathfinders work to ambush and harass enemy forces arriving in the war zone.",
-            "description": "<p>Use this Stratagem in the Reinforcements step of your opponent\u2019s Movement phase, after an enemy unit has been set up on the battlefield. Select one <em>ALAITOC<\/em> <em>RANGERS<\/em> unit from your army that is either on the battlefield or in Strategic Reserves.If that RANGERS unit is in Strategic Reserves, set it up anywhere on the battlefield within 18\" of that enemy unit and more than 9\" away from any enemy models.At the end of the phase, that RANGERS unit can shoot as if it were your Shooting phase, but until the end of the phase, it can only target the enemy unit that was just set up on the battlefield (and only if that enemy unit is an eligible target).<\/p>"
+            "description": "<p>Use this Stratagem in the Reinforcements step of your opponent\u2019s Movement phase, after an enemy unit has been set up on the battlefield. Select one <em>ALAITOC<\/em> <em>RANGERS<\/em> unit from your army that is either on the battlefield or in Strategic Reserves.<ul><li>If that <em>RANGERS<\/em> unit is in Strategic Reserves, set it up anywhere on the battlefield within 18\" of that enemy unit and more than 9\" away from any enemy models.<\/li><li>At the end of the phase, that <em>RANGERS<\/em> unit can shoot as if it were your Shooting phase, but until the end of the phase, it can only target the enemy unit that was just set up on the battlefield (and only if that enemy unit is an eligible target).<\/li><\/ul><\/p>"
         },
         {
             "title": "Phantasm",
@@ -328,7 +329,7 @@ window.data.push( {
         },
         {
             "title": "Prismatic Blur",
-            "specialism": "Aeldari (Harlequins)",
+            "specialism": "Harlequins",
             "type": "Battle tactic stratagem",
             "min_cost": 2,
             "max_cost": null,
@@ -342,7 +343,7 @@ window.data.push( {
             "min_cost": 1,
             "max_cost": null,
             "fluff": "When the Aeldari march to war, their greatest warriors bring forth weapons and artefacts of great power, used in ritual battle by the exemplars of the Aspect Shrines.",
-            "description": "<p>Use this Stratagem before the battle, when you are mustering your army, if your WARLORD has the ASURYANI keyword. Select two models in your army that have the word \u2018Exarch\u2019 in their profile. Each of these models can be given one Aspect Shrine Relic; this must be a Relic they could have. Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).<\/p>"
+            "description": "<p>Use this Stratagem before the battle, when you are mustering your army, if your <em>WARLORD<\/em> has the <em>ASURYANI<\/em> keyword. Select two models in your army that have the word \u2018Exarch\u2019 in their profile. Each of these models can be given one Aspect Shrine Relic; this must be a Relic they could have. Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).<\/p>"
         },
         {
             "title": "Resonator Shard",
@@ -360,7 +361,7 @@ window.data.push( {
             "min_cost": 1,
             "max_cost": null,
             "fluff": "Many Farseers are accompanied to battle by a council of Warlocks who provide tactical advice, ensure their safety and amplify their psychic abilities.",
-            "description": "<p>Use this Stratagem before the battle, when you are mustering your army. Select one <em>FARSEER<\/em> model from your army and select one <em>WARLOCKS<\/em> unit from your army that contains 2 or more models. While that FARSEER model is within 6\" of that WARLOCKS unit, add 1 to Psychic tests taken for that FARSEER model. While that FARSEER model is within 3\" of that WARLOCKS unit, that FARSEER model can use the Look Out, Sir rule even if this unit contains fewer than 3 models. You can only use this Stratagem once.<\/p>"
+            "description": "<p>Use this Stratagem before the battle, when you are mustering your army. Select one <em>FARSEER<\/em> model from your army and select one <em>WARLOCKS<\/em> unit from your army that contains 2 or more models. While that <em>FARSEER<\/em> model is within 6\" of that <em>WARLOCKS<\/em> unit, add 1 to Psychic tests taken for that <em>FARSEER<\/em> model. While that <em>FARSEER<\/em> model is within 3\" of that <em>WARLOCKS<\/em> unit, that <em>FARSEER<\/em> model can use the Look Out, Sir rule even if this unit contains fewer than 3 models. You can only use this Stratagem once.<\/p>"
         },
         {
             "title": "Shield Discharge",
@@ -369,7 +370,7 @@ window.data.push( {
             "min_cost": 1,
             "max_cost": null,
             "fluff": "The energy shields used by the Aeldari can be set to blast their defensive projections outwards, disorientating the foe.",
-            "description": "<p>Use this Stratagem at the start of your Charge phase. Select one model from your army equipped with a serpent shield or Wave Serpent shield, then select one enemy unit within 12\" of that model. Until the end of the turn:That enemy unit cannot fire Overwatch or Set to Defend.Each time a model in that enemy unit makes a melee attack, subtract 1 from that attack\u2019s hit roll.After using this Stratagem, the selected model is no longer considered to be equipped with a serpent shield or Wave Serpent shield.<\/p>"
+            "description": "<p>Use this Stratagem at the start of your Charge phase. Select one model from your army equipped with a serpent shield or Wave Serpent shield, then select one enemy unit within 12\" of that model. Until the end of the turn:<ul><li>That enemy unit cannot fire Overwatch or Set to Defend.<\/li><li>Each time a model in that enemy unit makes a melee attack, subtract 1 from that attack\u2019s hit roll.<\/li><\/ul>After using this Stratagem, the selected model is no longer considered to be equipped with a serpent shield or Wave Serpent shield.<\/p>"
         },
         {
             "title": "Starhawk Missile",
@@ -378,7 +379,7 @@ window.data.push( {
             "min_cost": 1,
             "max_cost": null,
             "fluff": "Some Aeldari warriors and vehicles carry starhawk missiles for their missile launchers, which are specifically designed to target enemy flyers.",
-            "description": "<p>Use this Stratagem in your Shooting phase, when an <em>ASURYANI<\/em> model from your army targets an AIRCRAFT unit with an Aeldari missile launcher. That model can only make one attack with that weapon this phase, but when resolving that attack, add 1 to that attack\u2019s hit roll. If a hit is scored, the target suffers 2D3 mortal wounds and the attack sequence ends.<\/p>"
+            "description": "<p>Use this Stratagem in your Shooting phase, when an <em>ASURYANI<\/em> model from your army targets an <em>AIRCRAFT<\/em> unit with an Aeldari missile launcher. That model can only make one attack with that weapon this phase, but when resolving that attack, add 1 to that attack\u2019s hit roll. If a hit is scored, the target suffers 2D3 mortal wounds and the attack sequence ends.<\/p>"
         },
         {
             "title": "The Avatar Resurgent",
@@ -391,12 +392,12 @@ window.data.push( {
         },
         {
             "title": "The Curtain Falls",
-            "specialism": "Aeldari (Harlequins)",
+            "specialism": "Harlequins",
             "type": "Strategic ploy stratagem",
             "min_cost": 1,
             "max_cost": null,
             "fluff": "As their deadly performance draws to a close, the players exit the stage, moving on to the next in a blaze of light and the shrieking of engines.",
-            "description": "<p>Use this Stratagem in the Fight phase, after a <em>HARLEQUINS<\/em> <em>INFANTRY<\/em> unit from your army has finished making its attacks, but before it makes a consolidation move. Instead of consolidating as normal, if every model in that unit is within 6\" of a friendly &lt;SAEDATH&gt; <em>TRANSPORT<\/em> model, that unit can embark within that TRANSPORT model as if it were your Movement phase, even if that unit has disembarked this turn, provided that TRANSPORT model has enough transport capacity available for the whole unit to embark.<\/p>"
+            "description": "<p>Use this Stratagem in the Fight phase, after a <em>HARLEQUINS<\/em> <em>INFANTRY<\/em> unit from your army has finished making its attacks, but before it makes a consolidation move. Instead of consolidating as normal, if every model in that unit is within 6\" of a friendly &lt;SAEDATH&gt; <em>TRANSPORT<\/em> model, that unit can embark within that <em>TRANSPORT<\/em> model as if it were your Movement phase, even if that unit has disembarked this turn, provided that <em>TRANSPORT<\/em> model has enough transport capacity available for the whole unit to embark.<\/p>"
         },
         {
             "title": "The Great Enemy",
@@ -405,7 +406,7 @@ window.data.push( {
             "min_cost": 1,
             "max_cost": null,
             "fluff": "The Chaos God Slaanesh is reviled by the Aeldari, who despise its followers with a ferocious loathing.",
-            "description": "<p>Use this Stratagem in the Fight phase, when an <em>ASURYANI<\/em>, <em>HARLEQUINS<\/em> or <em>YNNARI<\/em> unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes a melee attack that targets a SLAANESH unit, you can re-roll the hit roll and the wound roll.<\/p>"
+            "description": "<p>Use this Stratagem in the Fight phase, when an <em>ASURYANI<\/em>, <em>HARLEQUINS<\/em> or <em>YNNARI<\/em> unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes a melee attack that targets a <em>SLAANESH<\/em> unit, you can re-roll the hit roll and the wound roll.<\/p>"
         },
         {
             "title": "The Phoenix Reborn",
@@ -432,7 +433,7 @@ window.data.push( {
             "min_cost": 1,
             "max_cost": 2,
             "fluff": "Spirit stones are said to originate from the tears wept by the goddess Isha when she was sundered from her mortal children, and it is believed that she intervenes to prevent their destruction.",
-            "description": "<p>Use this Stratagem in your Command phase. Select one &lt;CRAFTWORLD&gt; <em>WRAITH<\/em> <em>CONSTRUCT<\/em> model from your army. That model regains up to D3 lost wounds. If the selected model is within 6\" of a friendly &lt;CRAFTWORLD&gt; <em>SPIRITSEER<\/em> model, that model regains 3 lost wounds instead. If you select a TITANIC model, this Stratagem costs 2CP; otherwise, it costs 1 CP.<\/p>"
+            "description": "<p>Use this Stratagem in your Command phase. Select one &lt;CRAFTWORLD&gt; <em>WRAITH<\/em> <em>CONSTRUCT<\/em> model from your army. That model regains up to D3 lost wounds. If the selected model is within 6\" of a friendly &lt;CRAFTWORLD&gt; <em>SPIRITSEER<\/em> model, that model regains 3 lost wounds instead. If you select a <em>TITANIC<\/em> model, this Stratagem costs 2CP; otherwise, it costs 1 CP.<\/p>"
         },
         {
             "title": "Thrice-layered Wards",
@@ -445,7 +446,7 @@ window.data.push( {
         },
         {
             "title": "Torments Of The Fiery Pit",
-            "specialism": "Aeldari (Harlequins)",
+            "specialism": "Harlequins",
             "type": "Epic deed stratagem",
             "min_cost": 1,
             "max_cost": null,
@@ -459,7 +460,7 @@ window.data.push( {
             "min_cost": 1,
             "max_cost": null,
             "fluff": "In times of great need, the leaders of the Aeldari will allow the use of a wide array of ancient treasures, arming their kin with artefacts of extraordinary power.",
-            "description": "<p>Use this Stratagem before the battle, when you are mustering your army, if your WARLORD has the ASURYANI or HARLEQUINS keyword. If your WARLORD has the HARLEQUINS keyword you can select one <em>HARLEQUINS<\/em> <em>CHARACTER<\/em> model from your army. If your WARLORD has the ASURYANI keyword, you can select one <em>ASURYANI<\/em> <em>CHARACTER<\/em> model from your army. The selected CHARACTER model can be given one Treasures of the Aeldari Relic (this must be a Relic they can have). Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).<\/p>"
+            "description": "<p>Use this Stratagem before the battle, when you are mustering your army, if your <em>WARLORD<\/em> has the <em>ASURYANI<\/em> or <em>HARLEQUINS<\/em> keyword. If your <em>WARLORD<\/em> has the <em>HARLEQUINS<\/em> keyword you can select one <em>HARLEQUINS<\/em> <em>CHARACTER<\/em> model from your army. If your <em>WARLORD<\/em> has the <em>ASURYANI<\/em> keyword, you can select one <em>ASURYANI<\/em> <em>CHARACTER<\/em> model from your army. The selected <em>CHARACTER<\/em> model can be given one Treasures of the Aeldari Relic (this must be a Relic they can have). Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).<\/p>"
         },
         {
             "title": "Unparalleled Mastery",
@@ -472,7 +473,7 @@ window.data.push( {
         },
         {
             "title": "Virtuosos Of The Webway",
-            "specialism": "Aeldari (Harlequins)",
+            "specialism": "Harlequins",
             "type": "Battle tactic stratagem",
             "min_cost": 1,
             "max_cost": null,
@@ -481,7 +482,7 @@ window.data.push( {
         },
         {
             "title": "War Dancers",
-            "specialism": "Aeldari (Harlequins)",
+            "specialism": "Harlequins",
             "type": "Battle tactic stratagem",
             "min_cost": 3,
             "max_cost": null,
@@ -504,7 +505,7 @@ window.data.push( {
             "min_cost": 1,
             "max_cost": 3,
             "fluff": "Aeldari forces of many kinds make use of the ancient labyrinth of webway portals to strike the enemy seemingly from nowhere.",
-            "description": "<p>Use this Stratagem before the battle, when declaring reserves and transports (if you are playing a mission without this step, use this Stratagem during deployment instead). If you spend lCP, you can set up one <em>ASURYANI<\/em> <em>INFANTRY<\/em>, <em>ASURYANI<\/em> <em>BIKER<\/em>, <em>HARLEQUINS<\/em> <em>INFANTRY<\/em>, <em>HARLEQUINS<\/em> <em>BIKER<\/em>, <em>YNNARI<\/em> <em>INFANTRY<\/em> or <em>YNNARI<\/em> <em>BIKER<\/em> unit from your army in the webway instead of setting it up on the battlefield. If you spend 3CPs, you can place two ASURYANI INFANTRY, ASURYANI BIKER, HARLEQUINS INFANTRY, HARLEQUINS BIKER, YNNARI INFANTRY or YNNARI BIKER units in the webway instead.In the Reinforcements step of one of your Movement phases, you can set up any units in the webway anywhere on the battlefield that is more than 9\" away from any enemy models. You can only use this Stratagem once.<\/p>"
+            "description": "<p>Use this Stratagem before the battle, when declaring reserves and transports (if you are playing a mission without this step, use this Stratagem during deployment instead). If you spend lCP, you can set up one <em>ASURYANI<\/em> <em>INFANTRY<\/em>, <em>ASURYANI<\/em> <em>BIKER<\/em>, <em>HARLEQUINS<\/em> <em>INFANTRY<\/em>, <em>HARLEQUINS<\/em> <em>BIKER<\/em>, <em>YNNARI<\/em> <em>INFANTRY<\/em> or <em>YNNARI<\/em> <em>BIKER<\/em> unit from your army in the webway instead of setting it up on the battlefield. If you spend 3CPs, you can place two <em>ASURYANI<\/em> <em>INFANTRY<\/em>, <em>ASURYANI<\/em> <em>BIKER<\/em>, <em>HARLEQUINS<\/em> <em>INFANTRY<\/em>, <em>HARLEQUINS<\/em> <em>BIKER<\/em>, <em>YNNARI<\/em> <em>INFANTRY<\/em> or <em>YNNARI<\/em> <em>BIKER<\/em> units in the webway instead.In the Reinforcements step of one of your Movement phases, you can set up any units in the webway anywhere on the battlefield that is more than 9\" away from any enemy models. You can only use this Stratagem once.<\/p>"
         },
         {
             "title": "Wireweave Grenades",
@@ -513,7 +514,7 @@ window.data.push( {
             "min_cost": 1,
             "max_cost": null,
             "fluff": "Amongst the various deadly devices used by those on the Path of the Outcast, wireweave grenades extend monofilament wires that slice and entangle their enemy at ankle height.",
-            "description": "<p>Use this Stratagem at the start of your opponent\u2019s Movement or Charge phase. Select one enemy unit (excluding units that can FLY) within 12\" of a <em>SHROUD<\/em> <em>RUNNERS<\/em> unit from your army, and roll one D3:That enemy unit suffers a number of mortal wounds equal to the result (to a maximum of 1 mortal wound per model in that enemy unit).Until the end of the phase, subtract the result from that enemy unit\u2019s Move characteristic (to a minimum of 0\").Until the end of the phase, your opponent must subtract the result from charge rolls made for that enemy unit (to a minimum of 0\").You can only use this Stratagem once per turn.<\/p>"
+            "description": "<p>Use this Stratagem at the start of your opponent\u2019s Movement or Charge phase. Select one enemy unit (excluding units that can <em>FLY<\/em>) within 12\" of a <em>SHROUD<\/em> <em>RUNNERS<\/em> unit from your army, and roll one D3:<ul><li>That enemy unit suffers a number of mortal wounds equal to the result (to a maximum of 1 mortal wound per model in that enemy unit).<\/li><li>Until the end of the phase, subtract the result from that enemy unit\u2019s Move characteristic (to a minimum of 0\").<\/li><li>Until the end of the phase, your opponent must subtract the result from charge rolls made for that enemy unit (to a minimum of 0\").<\/li><\/ul>You can only use this Stratagem once per turn.<\/p>"
         },
         {
             "title": "Withering Volleys",

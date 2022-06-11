@@ -1,0 +1,37 @@
+{
+  "name": "Stratablet app",
+  "short_name": "Stratablet",
+  "description": "Quick access your Warhammer 40000 stratagems.",
+  "icons": [
+    {
+      "src": "resources/icons/64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "resources/icons/128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "resources/icons/192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "resources/icons/256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "resources/icons/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "scope": "/",
+  "start_url": "/index.html",
+  "display": "fullscreen",
+  "theme_color": "#222222",
+  "background_color": "#FFFFFF"
+}

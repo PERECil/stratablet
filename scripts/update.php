@@ -2,7 +2,16 @@
 
 declare(strict_types=1);
 
-function leech(string $group, string $faction, string $path, string $url)
+function fix_specialism(string $specialism)
+{
+    if($specialism === 'Aeldari (Harlequins)') {
+        return 'Harlequins';
+    }
+
+    return $specialism;
+}
+
+function leech(string $group, string $faction, string $id, string $path, string $url)
 {
     $contents = file_get_contents($url);
 
@@ -28,6 +37,9 @@ function leech(string $group, string $faction, string $path, string $url)
         $types = explode(' – ', $match[4]);
 
         $specialism = $types[0];
+
+        $specialism = fix_specialism($specialism);
+
         $type = null;
 
         if(count($types) > 1) {
@@ -36,8 +48,8 @@ function leech(string $group, string $faction, string $path, string $url)
     
         $description = $match[6];
     
-        $description = preg_replace( '%<span class="kwb kwbu">(.*?)</span>%', '<em>$1</em>', $description );
-        $description = strip_tags( $description, '<em>' );
+        $description = preg_replace( '%<span class="(kwb|.*? kwb .*?|kwb .*?|.*? kwb)">(.*?)</span>%', '<em>$2</em>', $description );
+        $description = strip_tags( $description, '<em><ul><li>' );
         $description = '<p>'.$description.'</p>';
     
         $stratagem = new \stdClass();
@@ -64,11 +76,12 @@ function leech(string $group, string $faction, string $path, string $url)
     $data = new \stdClass();
     $data->group = $group;
     $data->faction = $faction;
+    $data->id = $id;
     $data->stratagems = $stratagems;
     
     file_put_contents( $path, 'window.data.push( '.json_encode($data, JSON_PRETTY_PRINT ).');' );
 }
 
-leech( 'Xenos', 'Aeldari - Craftworlds', '../data/craftworlds.js', 'https://wahapedia.ru/wh40k9ed/factions/aeldari/#Stratagems');
-leech( 'Imperium', 'Space Marines', '../data/spacemarines.js', 'https://wahapedia.ru/wh40k9ed/factions/space-marines/#Stratagems');
-leech( 'Xenos', 'T\'au Empire', '../data/tau.js', 'https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Stratagems');
+leech( 'Xenos', 'Aeldari - Craftworlds', 'aeldari-craftworlds', '../data/craftworlds.js', 'https://wahapedia.ru/wh40k9ed/factions/aeldari/#Stratagems');
+leech( 'Imperium', 'Space Marines', 'space-marines', '../data/spacemarines.js', 'https://wahapedia.ru/wh40k9ed/factions/space-marines/#Stratagems');
+leech( 'Xenos', 'T\'au Empire', 'tau-empire', '../data/tau.js', 'https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Stratagems');
