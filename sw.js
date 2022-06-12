@@ -1,3 +1,38 @@
+self.addEventListener('install', (e) => {
+  e.waitUntil(
+    caches.open('stratablet-v1').then((cache) => cache.addAll([
+      '/index.html',
+      '/data/craftworlds.js',
+      '/data/spacemarines.js',
+      '/data/tau.js',
+      '/main.js',
+      '/style.css',
+      '/resources/fonts/Conduit-ExtraBold.otf',
+      '/resources/fonts/Conduit-Regular.ttf',
+      '/resources/fonts/Conduit-Bold.ttf',
+      '/resources/fonts/Conduit-BoldItalic.ttf',
+      '/resources/fonts/Conduit-ExtraLight.ttf',
+      '/resources/fonts/Conduit-Light.ttf',
+      '/resources/fonts/Conduit-LightItalic.ttf',
+      '/resources/fonts/Conduit-Medium.ttf',
+      '/resources/fonts/Conduit-MediumItalic.ttf',
+      '/resources/icons/icon-64.png',
+      '/resources/icons/icon-128.png',
+      '/resources/icons/icon-256.png',
+      '/resources/icons/icon-512.png'
+    ])),
+  );
+});
+
+self.addEventListener('fetch', (e) => {
+  console.log(e.request.url);
+  e.respondWith(
+    caches.match(e.request).then((response) => response || fetch(e.request)),
+  );
+});
+
+
+/*
 console.log('[Service Worker] Install');
 debugger;
 
@@ -31,7 +66,7 @@ self.addEventListener('install', (e) => {
     e.waitUntil((async () => {
       const cache = await caches.open(cacheName);
       console.log('[Service Worker] Caching all: app shell and content');
-      await cache.addAll(contentToCache);
+      await cache.addAll(appShellFiles);
     })());
 });
 
@@ -47,3 +82,4 @@ self.addEventListener('fetch', (e) => {
       return response;
     })());
 });
+*/
