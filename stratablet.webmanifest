@@ -29,8 +29,8 @@
       "type": "image/png"
     }
   ],
-  "scope": "/",
-  "start_url": "/index.html",
+  "scope": "/stratablet/",
+  "start_url": "/stratablet/index.html",
   "display": "fullscreen",
   "theme_color": "#222222",
   "background_color": "#FFFFFF"
