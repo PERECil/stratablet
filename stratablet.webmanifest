@@ -30,7 +30,7 @@
     }
   ],
   "scope": "/stratablet/",
-  "start_url": "/stratablet/index.html",
+  "start_url": "https://perecil.github.io/stratablet/index.html",
   "display": "fullscreen",
   "theme_color": "#222222",
   "background_color": "#FFFFFF"
