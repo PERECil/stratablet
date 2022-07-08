@@ -100,7 +100,7 @@ window.data.push( {
             "min_cost": 3,
             "max_cost": null,
             "fluff": "The Farseers of the Asuryani are capable of generating vast psychic storms that can toss heavily armoured troops around like leaves.",
-            "description": "<p>Use this Stratagem in your Command phase, if a <em>FARSEER<\/em> model from your army is on the battlefield. Select one point on the battlefield within 24\" of a <em>FARSEER<\/em> model from your army and place a marker on that point. In your next Psychic phase, <em>FARSEER<\/em> models from your army that are within 24\" of that marker can perform the following psychic action:Empower Storm (Psychic Action - Warp Charge 5): Any number of <em>FARSEER<\/em> models from your army can attempt to perform this psychic action.At the start of your next Shooting phase, roll one D6 for each unit within 6\" of the centre of the marker you placed, subtracting 2 if the unit being rolled for is an <em>INFANTRY<\/em> <em>CHARACTER<\/em> unit. On a 2+, that unit suffers D3 mortal wounds and an additional 1 mortal wound for each time the Empower Storm psychic action was successfully completed this turn. That marker is then removed. You can only use this Stratagem once.<\/p>"
+            "description": "<p>Use this Stratagem in your Command phase, if a <em>FARSEER<\/em> model from your army is on the battlefield. Select one point on the battlefield within 24\" of a <em>FARSEER<\/em> model from your army and place a marker on that point. In your next Psychic phase, <em>FARSEER<\/em> models from your army that are within 24\" of that marker can perform the following psychic action:Empower Storm (Psychic Action - Warp Charge 5): Any number of <em>FARSEER<\/em> models from your army that have visibility to the centre of the marker you placed can attempt to perform this psychic action.At the start of your next Shooting phase, roll one D6 for each unit within 6\" of the centre of the marker you placed. On a 4+, that unit suffers D3 mortal wounds. That marker is then removed. You can only use this Stratagem once.<\/p>"
         },
         {
             "title": "Favoured Of The Laughing God",
@@ -127,7 +127,7 @@ window.data.push( {
             "min_cost": 2,
             "max_cost": null,
             "fluff": "The Aeldari are masters at using hit and run tactics, engaging a target with a flurry of shots before quickly manoeuvring into cover or out of sight.",
-            "description": "<p>Use this Stratagem in your Shooting phase, after making attacks with an <em>ASURYANI<\/em>, <em>HARLEQUINS<\/em> or <em>YNNARI<\/em> unit (excluding <em>AIRCRAFT<\/em> units) from your army. That unit can immediately make a Normal Move of up to 7\". Unless that unit is a <em>HARLEQUINS<\/em> unit, it cannot embark within a <em>TRANSPORT<\/em> model at the end of this move. Until the end of the turn, that unit is not eligible to declare a charge. Units with the Battle Focus ability cannot make a Battle Focus move in a turn in which they are selected for this Stratagem.<\/p>"
+            "description": "<p>Use this Stratagem in your Shooting phase, after making attacks with an <em>ASURYANI<\/em>, <em>HARLEQUINS<\/em> or <em>YNNARI<\/em> unit (excluding <em>AIRCRAFT<\/em> units) from your army. That unit can immediately make a Normal Move of up to 7\". Unless that unit is a <em>HARLEQUINS<\/em> unit, it cannot embark within a <em>TRANSPORT<\/em> model at the end of this move. Until the end of the turn, that unit is not eligible to declare a charge. Units with the Battle Focus ability cannot make a Battle Focus move in a turn in which they are selected for this Stratagem. You can only use this Stratagem once.<\/p>"
         },
         {
             "title": "Fire And Reposition",
@@ -262,7 +262,7 @@ window.data.push( {
             "min_cost": 1,
             "max_cost": null,
             "fluff": "Grace in battle and merciless efficiency are prized virtues in craftworld armies. Like the shimmering blades of Khaine, the Asuryani carve through the ranks of their enemies.",
-            "description": "<p>Use this Stratagem in your Shooting phase, when an <em>ASURYANI<\/em> unit from your army makes a Battle Focus move. Do not roll one D6 to determine the distance that unit can move; instead, until the end of the phase, that unit can move up to 6\".<\/p>"
+            "description": "<p>Use this Stratagem in your Shooting phase, when an <em>ASURYANI<\/em> unit from your army makes a Battle Focus move. Use this Stratagem in your Shooting phase, after rolling the D6 to determine how far an <em>ASURYANI<\/em> unit from your army moves when it makes a Battle Focus move. Re-roll that D6.<\/p>"
         },
         {
             "title": "Mocking Laughter",
@@ -290,6 +290,15 @@ window.data.push( {
             "max_cost": null,
             "fluff": "Some Harlequins enjoy launching themselves into the bloody spectacle of war, seizing the enemy's attention through explosive bursts of violence.",
             "description": "<p>Use this Stratagem in your Charge phase, when a <em>HARLEQUINS<\/em> <em>INFANTRY<\/em> unit from your army makes a charge move. Until the end of the turn, add 1 to the Damage characteristic of melee weapons models in that unit are equipped with (to a maximum of 3).<\/p>"
+        },
+        {
+            "title": "Nimble Escape",
+            "specialism": "Craftworlds Stratagem",
+            "type": null,
+            "min_cost": 2,
+            "max_cost": null,
+            "fluff": "After striking their quarry, the warriors of the Windrider Host pull off a daring manoeuvre to twist out of the grasp of the enemy.",
+            "description": "<p>Use this Stratagem in the Fight phase after a WINDRIDER HOST unit from your army has fought. That unit can immediately make a move (and Advance) as if it were your Movement phase. If there are any enemy units within 1\" it can Fall Back instead.<\/p>"
         },
         {
             "title": "No Price Too Steep",
@@ -373,6 +382,15 @@ window.data.push( {
             "description": "<p>Use this Stratagem at the start of your Charge phase. Select one model from your army equipped with a serpent shield or Wave Serpent shield, then select one enemy unit within 12\" of that model. Until the end of the turn:<ul><li>That enemy unit cannot fire Overwatch or Set to Defend.<\/li><li>Each time a model in that enemy unit makes a melee attack, subtract 1 from that attack\u2019s hit roll.<\/li><\/ul>After using this Stratagem, the selected model is no longer considered to be equipped with a serpent shield or Wave Serpent shield.<\/p>"
         },
         {
+            "title": "Spirit Shield",
+            "specialism": "Craftworlds Stratagem",
+            "type": null,
+            "min_cost": 2,
+            "max_cost": null,
+            "fluff": "Diverting the defensive properties of their rune armour, this Spiritseer shrouds their precious wraith constructs from harm.",
+            "description": "<p>Use this Stratagem at the end of your Movement phase. Pick a WRAITH HOST <em>WRAITH<\/em> <em>CONSTRUCT<\/em> unit from your army that is within 6\" of a friendly WRAITH HOST <em>SPIRITSEER<\/em>. Until the start of your next turn, that unit gains a 4+ invulnerable save but the SPIRITSEER loses the 4+ invulnerable save granted by its Rune Armour.<\/p>"
+        },
+        {
             "title": "Starhawk Missile",
             "specialism": "Aeldari",
             "type": "Wargear stratagem",
@@ -380,6 +398,15 @@ window.data.push( {
             "max_cost": null,
             "fluff": "Some Aeldari warriors and vehicles carry starhawk missiles for their missile launchers, which are specifically designed to target enemy flyers.",
             "description": "<p>Use this Stratagem in your Shooting phase, when an <em>ASURYANI<\/em> model from your army targets an <em>AIRCRAFT<\/em> unit with an Aeldari missile launcher. That model can only make one attack with that weapon this phase, but when resolving that attack, add 1 to that attack\u2019s hit roll. If a hit is scored, the target suffers 2D3 mortal wounds and the attack sequence ends.<\/p>"
+        },
+        {
+            "title": "Tempest Of Blades",
+            "specialism": "Craftworlds Stratagem",
+            "type": null,
+            "min_cost": 3,
+            "max_cost": null,
+            "fluff": "When the command to kill is given, a gale of razor-edged discs is unleashed to tear the enemy\u2019s lines to shreds.",
+            "description": "<p>Use this Stratagem at the start of your Shooting phase. Pick a WINDRIDER HOST <em>FARSEER<\/em> <em>SKYRUNNER<\/em> unit from your army. Improve the Armour Penetration characteristic of shooting attacks made by friendly WINDRIDER HOST units within 6\" of the unit you picked by 1 until the end of that phase (e.g. AP-1 would become AP-2).<\/p>"
         },
         {
             "title": "The Avatar Resurgent",
@@ -508,6 +535,15 @@ window.data.push( {
             "description": "<p>Use this Stratagem before the battle, when declaring reserves and transports (if you are playing a mission without this step, use this Stratagem during deployment instead). If you spend lCP, you can set up one <em>ASURYANI<\/em> <em>INFANTRY<\/em>, <em>ASURYANI<\/em> <em>BIKER<\/em>, <em>HARLEQUINS<\/em> <em>INFANTRY<\/em>, <em>HARLEQUINS<\/em> <em>BIKER<\/em>, <em>YNNARI<\/em> <em>INFANTRY<\/em> or <em>YNNARI<\/em> <em>BIKER<\/em> unit from your army in the webway instead of setting it up on the battlefield. If you spend 3CPs, you can place two <em>ASURYANI<\/em> <em>INFANTRY<\/em>, <em>ASURYANI<\/em> <em>BIKER<\/em>, <em>HARLEQUINS<\/em> <em>INFANTRY<\/em>, <em>HARLEQUINS<\/em> <em>BIKER<\/em>, <em>YNNARI<\/em> <em>INFANTRY<\/em> or <em>YNNARI<\/em> <em>BIKER<\/em> units in the webway instead.In the Reinforcements step of one of your Movement phases, you can set up any units in the webway anywhere on the battlefield that is more than 9\" away from any enemy models. You can only use this Stratagem once.<\/p>"
         },
         {
+            "title": "Windrider Host",
+            "specialism": "Specialist Detachment Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "The Windrider Host is the fury of the craftworld carried upon the storm. The speed and cunning of this airborne formation mirrors that of the Cosmic Serpent itself.",
+            "description": "<p>Use this Stratagem when choosing your army. Pick a Craftworld Detachment from your army to be a Windrider Host Specialist Detachment. <em>AUTARCH<\/em> <em>SKYRUNNERS<\/em>, <em>FARSEER<\/em> <em>SKYRUNNERS<\/em>, WARLOCK SKYRUNNERS, WARLOCK SKYRUNNER CONCLAVES, <em>WINDRIDERS<\/em> and <em>VYPERS<\/em> in that Detachment gain the WINDRIDER HOST keyword.<\/p>"
+        },
+        {
             "title": "Wireweave Grenades",
             "specialism": "Aeldari",
             "type": "Wargear stratagem",
@@ -524,6 +560,24 @@ window.data.push( {
             "max_cost": 2,
             "fluff": "Maugan Ra\u2019s influence has ensured that not only are Altansar\u2019s Dark Reapers amongst the finest of their kind but that all warriors of the craftworld are superlative shots. In the fierce fighting that the Altansari have engaged in for millennia, these skills have served them well time and time again.",
             "description": "<p>Use this Stratagem in your Shooting phase, when an <em>ALTANSAR<\/em> unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes an attack with an Aeldari missile launcher or Reaper launcher, improve the Armour Penetration characteristic of that attack by 1. If that unit has the <em>DARK<\/em> <em>REAPER<\/em>s keyword, this Stratagem costs 2CP; otherwise, it costs 1CP.<\/p>"
+        },
+        {
+            "title": "Wraith Host",
+            "specialism": "Specialist Detachment Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "Guided by Spiritseers, the wraith hosts of the craftworlds are the noble houses of Aeldari myth given life once more.",
+            "description": "<p>Use this Stratagem when choosing your army. Pick a Craftworlds Detachment from your army to be a Wraith Host Specialist Detachment. <em>SPIRITSEERS<\/em> and <em>WRAITH<\/em> <em>CONSTRUCTS<\/em> in that Detachment gain the WRAITH HOST keyword.<\/p>"
+        },
+        {
+            "title": "Wrath Of The Dead",
+            "specialism": "Craftworlds Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "With cold and unforgiving fury, these wraith constructs carve a path of devastation through the enemy.",
+            "description": "<p>Use this Stratagem at the start of the Fight phase. Pick a WRAITH HOST <em>WRAITH<\/em> <em>CONSTRUCT<\/em> unit from your army. Add 1 to the Attacks characteristic of models in that unit until the end of that phase.<\/p>"
         },
         {
             "title": "Wrath Of The Shrines",

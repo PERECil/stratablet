@@ -157,6 +157,15 @@ window.data.push( {
             "description": "<p>Use this Stratagem in your opponent\u2019s Charge phase. Select one <em>DEATHWATCH<\/em> unit from your army that contains a Black Shield, that unit can perform a Heroic Intervention this phase as if it were a <em>CHARACTER<\/em> unit.<\/p>"
         },
         {
+            "title": "Attack Squadron",
+            "specialism": "Specialist Detachment Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "Dust clouds billow behind the Ravenwing Attack Squadron as it hurtles into battle. Striking swiftly, the 2nd Company huntsmen drive hard into the midst of the enemy.",
+            "description": "<p>Use this Stratagem when choosing your army. Pick a <em>DARK<\/em> <em>ANGELS<\/em> Detachment from your army to be a Ravenwing Attack Squadron Specialist Detachment. <em>RAVENWING<\/em> units in that Detachment gain the ATTACK SQUADRON keyword.<\/p>"
+        },
+        {
             "title": "Auspex Scan",
             "specialism": "Adeptus Astartes",
             "type": "Wargear stratagem",
@@ -218,6 +227,15 @@ window.data.push( {
             "max_cost": null,
             "fluff": "Amongst the rarest forms of special issue ammunition available to the Deathwatch, these bolts are handed out, a few each, to warriors sent on investigative missions, lest they encounter a foe their usual wargear cannot best.",
             "description": "<p>Use this Stratagem in your Shooting phase, when you select a <em>STRIKE<\/em> <em>FORCE<\/em> <em>KILL<\/em> <em>TEAM<\/em> or <em>STRIKE<\/em> <em>FORCE<\/em> <em>CHARACTER<\/em> unit from your army to shoot. Until the end of the phase:<ul><li>The Type characteristic of all bolt weapons models in that unit are equipped with is changed to Heavy 1.<\/li><li>Each time a model in that unit makes a ranged attack with a Bolt weapon, on an unmodified wound roll of 6 that attack inflicts 1 mortal wound on the target in addition to any normal damage (a maximum of 6 mortal wounds can be inflicted per phase via this Stratagem).<\/li><\/ul><\/p>"
+        },
+        {
+            "title": "Blood Scent",
+            "specialism": "Space Wolves Stratagem",
+            "type": null,
+            "min_cost": 2,
+            "max_cost": null,
+            "fluff": "Once blood has been drawn, the warriors of the Stalker Pack fall upon their enemies like savage wolves, tearing them to pieces.",
+            "description": "<p>Use this Stratagem in the Fight phase. Pick an enemy <em>INFANTRY<\/em> or <em>MONSTER<\/em> unit that has suffered any casualties, or has any models in it with less than their starting number of wounds. Add 1 to wound rolls for attacks made by <em>STALKER<\/em> <em>PACK<\/em> units from your army that target that enemy unit until the end of that phase.<\/p>"
         },
         {
             "title": "Bolster Defences",
@@ -319,6 +337,15 @@ window.data.push( {
             "description": "<p>Use this Stratagem before the battle. Select one <em>BLACK<\/em> <em>TEMPLARS<\/em> model from your army that has the word \u2018Sergeant\u2019 or \u2018Sword Brother\u2019 in their profile. Add 1 to that model\u2019s Attacks and Wounds characteristics and improve that model\u2019s Weapon Skill characteristic by 1. You can only use this Stratagem once.<\/p>"
         },
         {
+            "title": "Chief Librarian",
+            "specialism": "Blood Ravens Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "As masters of the psychic arts, the Chief Librarians of the Blood Ravens can direct the energies of the immaterium with incredible precision and power.",
+            "description": "<p>Use this Stratagem before the battle. Select one <em>BLOOD<\/em> <em>RAVENS<\/em> <em>LIBRARIAN<\/em> model from your army. That model gains the <em>CHIEF<\/em> <em>LIBRARIAN<\/em> keyword and the following ability: \u2018Chief Librarian: This model knows one additional psychic power from their chosen discipline and can attempt to deny one additional psychic power in your opponent\u2019s Psychic phase.\u2019 You can only use this Stratagem once per battle.<\/p>"
+        },
+        {
             "title": "Chogorian Thunderbolts",
             "specialism": "White Scars",
             "type": "Strategic ploy stratagem",
@@ -418,6 +445,15 @@ window.data.push( {
             "description": "<p>Use this Stratagem at the start of the Morale phase. Add 1 to the Leadership characteristic of <em>ULTRAMARINES<\/em> models from your army until the end of the phase.<\/p>"
         },
         {
+            "title": "Crimson Fists Liberator Strike Force",
+            "specialism": "Specialist Detachment Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "The daemonic siege on Rynn\u2019s World was finally lifted by the arrival of the Indomitus Crusade. The beleaguered Crimson Fists had their ranks bolstered by Primaris veterans of Rogal Dorn\u2019s heritage.",
+            "description": "<p>Use this Stratagem when choosing your army. Pick a <em>CRIMSON<\/em> <em>FISTS<\/em> Detachment from your army to be a Crimson Fists Liberator Strike Force Specialist Detachment. <em>PRIMARIS<\/em> <em>CHARACTERS<\/em>, <em>INTERCESSOR<\/em> <em>SQUADS<\/em>, <em>REIVER<\/em> <em>SQUADS<\/em> and <em>HELLBLASTER<\/em> <em>SQUADS<\/em> in that Detachment gain the <em>LIBERATOR<\/em> <em>STRIKE<\/em> <em>FORCE<\/em> keyword.<\/p>"
+        },
+        {
             "title": "Crusader\u2019s Wrath",
             "specialism": "Black Templars",
             "type": "Battle tactic stratagem",
@@ -497,6 +533,15 @@ window.data.push( {
             "max_cost": null,
             "fluff": "Legendary deeds in the midst of battle are an intoxicating mead. Those of the hero\u2019s retinue are inspired to greater feats of daring and valour, proving themselves worthy of their champion.",
             "description": "<p>Use this Stratagem in any phase, when a <em>SPACE<\/em> <em>WOLVES<\/em> <em>CHARACTER<\/em> model (excluding <em>VEHICLE<\/em> models) from your army that does not have a Warlord Trait meets the requirements for a Deed. At the end of the phase, until the end of the battle, that model gains the Saga ability associated with that Deed.<\/p>"
+        },
+        {
+            "title": "Defence In Depth",
+            "specialism": "Castellans of the Rift",
+            "type": "Strategic ploy stratagem",
+            "min_cost": 2,
+            "max_cost": null,
+            "fluff": "The Castellans of the Rift set up forward positions, creating a defensive line as part of their tactics to halt the enemy advance.",
+            "description": "<p>Use this Stratagem at the start of the first battle round, before the first turn begins. Select up to three different <em>CASTELLANS<\/em> OF THE <em>RIFT<\/em> units from your army. Each of those units can make a Normal Move. They cannot end this move within 9\" of any enemy models or within 9\" of your opponent\u2019s deployment zone. If both players have units that can do this, the player who is taking the first turn moves their units first. You can only use this Stratagem once.<\/p>"
         },
         {
             "title": "Defensive Focus",
@@ -641,6 +686,15 @@ window.data.push( {
             "max_cost": null,
             "fluff": "Having spent years relying on their trusted brothers, when Emperor\u2019s Spears fight together, little can stay their blows.",
             "description": "<p>Use this Stratagem in the Fight phase, when an <em>EMPEROR\u2019S<\/em> <em>SPEARS<\/em> <em>INFANTRY<\/em> unit from your army is selected to fight. Select one enemy unit within Engagement Range of that unit and one or more other friendly <em>EMPEROR\u2019S<\/em> <em>SPEARS<\/em> <em>INFANTRY<\/em> units. Until the end of the phase, each time a friendly <em>EMPEROR\u2019S<\/em> <em>SPEARS<\/em> <em>INFANTRY<\/em> unit makes a melee attack against that unit, you can re-roll the hit roll.<\/p>"
+        },
+        {
+            "title": "Fight Like Demigods",
+            "specialism": "Ultramarines Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "A gathering of courageous heroes, the Victrix Guard are more than capable of cutting their way through entire armies of foes.",
+            "description": "<p>Use this Stratagem at the start of the Fight phase. Pick a <em>VICTRIX<\/em> <em>GUARD<\/em> unit from your army within 6\" of a friendly <em>VICTRIX<\/em> <em>GUARD<\/em> <em>CAPTAIN<\/em>. Add 1 to hit rolls for attacks made by that unit until the end of that phase.<\/p>"
         },
         {
             "title": "Flakk Missile",
@@ -805,6 +859,15 @@ window.data.push( {
             "description": "<p>Use this Stratagem before the battle, when you are mustering your army, if your <em>WARLORD<\/em> has the <em>ADEPTUS<\/em> <em>ASTARTES<\/em> keyword. Select one <em>ADEPTUS<\/em> <em>ASTARTES<\/em> <em>CHARACTER<\/em> model from your army (excluding named characters) and determine one Warlord Trait for it (this must be a Warlord Trait it can have); that model it is only regarded as your <em>WARLORD<\/em> for the purposes of that Warlord Trait. Each Warlord Trait in your army must be unique (if randomly generated, re-roll duplicate results), and you cannot use this Stratagem to give a model two Warlord Traits. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).<\/p>"
         },
         {
+            "title": "Heroes Of Rynn\u2019s World",
+            "specialism": "Crimson Fists Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "The Crimson Fists strike out at threats upon beleaguered Imperial worlds, liberating them one by one as they did their home planet.",
+            "description": "<p>Use this Stratagem at the start of your Shooting phase. Pick a <em>LIBERATOR<\/em> <em>STRIKE<\/em> <em>FORCE<\/em> unit from your army. Until the end of the phase, each time you roll an unmodified hit roll of 6 for an attack made by that unit\u2019s ranged weapons, that attack inflicts 2 hits instead of 1.<\/p>"
+        },
+        {
             "title": "High-speed Focus",
             "specialism": "Dark Angels",
             "type": "Epic deed stratagem",
@@ -895,6 +958,15 @@ window.data.push( {
             "description": "<p>Use this Stratagem in your Shooting phase, when a <em>SALAMANDERS<\/em> unit from your army is chosen to shoot with. Until the end of that phase, change the type of all flame weapons models in that unit are equipped with to Pistol (e.g. an Assault D6 flame weapon becomes Pistol D6).<\/p>"
         },
         {
+            "title": "Imperial Fists Siegebreaker Cohort",
+            "specialism": "Specialist Detachment Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "Countless fortifications have fallen to the concentrated fury of an Imperial Fists Siegebreaker Cohort.",
+            "description": "<p>Use this Stratagem when choosing your army. Pick an <em>IMPERIAL<\/em> <em>FISTS<\/em> Detachment from your army to be a Siegebreaker Cohort Specialist Detachment. <em>CAPTAINS<\/em>, <em>CENTURIONS<\/em>, <em>DREADNOUGHTS<\/em> and <em>VINDICATORS<\/em> in that Detachment gain the <em>SIEGEBREAKER<\/em> <em>COHORT<\/em> keyword.<\/p>"
+        },
+        {
             "title": "Incendiary Shells",
             "specialism": "Black Templars",
             "type": "Wargear stratagem",
@@ -902,6 +974,15 @@ window.data.push( {
             "max_cost": null,
             "fluff": "Trusted Neophytes will sometimes be permitted to carry a supply of these shells into battle. Fitted with a thermite core, as they strike the foe they ignite, bringing the burning wrath of the Emperor to the target.",
             "description": "<p>Use this Stratagem in your Shooting phase, when a <em>BLACK<\/em> <em>TEMPLARS<\/em> unit from your army is selected to shoot with. Until the end of the phase, each time a model in that unit makes an attack with an Astartes shotgun, that attack has a Damage characteristic of 2.<\/p>"
+        },
+        {
+            "title": "Indomitus Crusaders",
+            "specialism": "Specialist Detachment Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "In the wake of the Great Rift, the Indomitus Crusade battled to retake Imperial worlds plagued by the forces of Chaos.",
+            "description": "<p>Use this Stratagem when choosing your army. Pick a Space Marines Detachment from your army to be an Indomitus Crusaders Specialist Detachment. <em>PRIMARIS<\/em> <em>CAPTAINS<\/em>, <em>PRIMARIS<\/em> <em>LIEUTENANTS<\/em>, <em>PRIMARIS<\/em> <em>ANCIENTS<\/em>, <em>INTERCESSOR<\/em> <em>SQUADS<\/em> and <em>INCEPTOR<\/em> <em>SQUADS<\/em> in that Detachment gain the <em>INDOMITUS<\/em> <em>CRUSADER<\/em> keyword.<\/p>"
         },
         {
             "title": "Infiltrators",
@@ -965,6 +1046,24 @@ window.data.push( {
             "max_cost": null,
             "fluff": "Those who would abuse their strength to oppress the weak and humble are amongst the Raven Guard\u2019s most favoured prey. ",
             "description": "<p>Use this Stratagem when a <em>RAVEN<\/em> <em>GUARD<\/em> <em>INFANTRY<\/em> unit or <em>RAVEN<\/em> <em>GUARD<\/em> <em>BIKER<\/em> unit from your army is chosen to fight with in the Fight phase. Until the end of the phase, when resolving an attack made by a model in that unit against a <em>CHARACTER<\/em> unit that is not a <em>VEHICLE<\/em>, or against a unit that is not a <em>VEHICLE<\/em> and contains any models with a Wounds characteristic of 4 or more, add 1 to the wound roll.<\/p>"
+        },
+        {
+            "title": "Let Them Come",
+            "specialism": "Castellans of the Rift",
+            "type": "Battle tactic stratagem",
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "Castellans of the Rift drill and train relentlessly, and have honed their reflexes to almost preternatural levels.",
+            "description": "<p>Use this Stratagem in the Fight phase, when a <em>CASTELLANS<\/em> OF THE <em>RIFT<\/em> <em>CORE<\/em> unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes an attack, if that unit was charged this turn, add 1 to that attack\u2019s hit roll.<\/p>"
+        },
+        {
+            "title": "Liberators",
+            "specialism": "Space Marines Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "Liberators of countless systems and planets, vanquishers of the heretical, the daemonic and the degenerate, these warriors are a blade honed in the fires of a hundred battles.",
+            "description": "<p>Use this Stratagem at the start of the Fight phase. Pick an <em>INDOMITUS<\/em> <em>CRUSADER<\/em> unit from your army. Until the start of your next turn, each time you roll an unmodified hit roll of 6 for an attack made by a model in this unit, that attacks inflicts 2 hits on the target instead of 1.<\/p>"
         },
         {
             "title": "Lightning Debarkation",
@@ -1165,6 +1264,15 @@ window.data.push( {
             "description": "<p>Use this Stratagem in your Charge phase. Select one enemy unit within Engagement Range of any <em>SPACE<\/em> <em>WOLVES<\/em> units from your army.<ul><li>Until the end of the turn, each time a friendly <em>SPACE<\/em> <em>WOLVES<\/em> <em>BEAST<\/em> or <em>SPACE<\/em> <em>WOLVES<\/em> <em>CAVALRY<\/em> unit declares a charge that targets the selected unit, roll one additional D6 and discard one of the dice.<\/li><li>Until the end of the turn, each time a friendly <em>SPACE<\/em> <em>WOLVES<\/em> <em>CAVALRY<\/em> model makes an attack with its crushing teeth and claws against the selected unit, and each time a friendly <em>SPACE<\/em> <em>WOLVES<\/em> <em>BEAST<\/em> model makes an attack with its teeth and claws against the selected unit, you can re-roll the wound roll.<\/li><\/ul><\/p>"
         },
         {
+            "title": "Pack Killers",
+            "specialism": "Space Wolves Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "With the scent of blood in their nostrils, the Stalker Pack first tempt their foe, testing out weaknesses in the enemy lines, before descending with murderous intent.",
+            "description": "<p>Use this Stratagem after a <em>STALKER<\/em> <em>PACK<\/em> unit makes a charge move. Pick another friendly <em>STALKER<\/em> <em>PACK<\/em> unit within 12\" of the unit that charged. Until the end of that phase, you can roll 3D6 when making Charge moves with that unit and discard the dice with the lowest score.<\/p>"
+        },
+        {
             "title": "Pain Is A Lesson",
             "specialism": "Imperial Fists",
             "type": "Strategic ploy stratagem",
@@ -1190,6 +1298,15 @@ window.data.push( {
             "max_cost": null,
             "fluff": "The Dark Angels\u2019 commanders are expected to have prodigious tactical and martial skills. Even in this elite group, some individuals stand out.",
             "description": "<p>Use this Stratagem after nominating a <em>DARK<\/em> <em>ANGELS<\/em> <em>CHARACTER<\/em> model that is not a named character to be your <em>WARLORD<\/em>. Generate one additional Warlord Trait for them; this must be from the Dark Angels Warlord Traits table. Each Warlord Trait in your army must be unique (if randomly generated, reroll duplicate results). You can only use this Stratagem once.<\/p>"
+        },
+        {
+            "title": "Paragons Of Dorn",
+            "specialism": "Crimson Fists Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "The Crimson Fists Primaris Marines are exemplars of their primogenetor, and they share his discipline under pressure. When they lay down a volley of return fire, their efficiency and speed borders on the supernatural.",
+            "description": "<p>Use this Stratagem at the end of an enemy Shooting phase. Pick a <em>LIBERATOR<\/em> <em>STRIKE<\/em> <em>FORCE<\/em> unit from your army that was targeted by one or more attacks this phase. That unit can immediately shoot as if it were your Shooting phase.<\/p>"
         },
         {
             "title": "Pivotal Moment",
@@ -1237,6 +1354,15 @@ window.data.push( {
             "description": "<p>Use this Stratagem in your Shooting phase, when a <em>DEATHWATCH<\/em> unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes a ranged attack against an <em>AELDARI<\/em> unit, you can ignore any or all hit roll and Ballistic Skill modifiers for that attack.<\/p>"
         },
         {
+            "title": "Push Them Back",
+            "specialism": "Castellans of the Rift",
+            "type": "Battle tactic stratagem",
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "Refusing to give their secured ground easily, Castellans of the Rift defend Imperial territory with all their might.",
+            "description": "<p>Use this Stratagem in your Shooting phase, when a <em>CASTELLANS<\/em> OF THE <em>RIFT<\/em> unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes an attack that targets a unit within your deployment zone, you can re-roll the hit roll.<\/p>"
+        },
+        {
             "title": "Rapid Fire",
             "specialism": "Adeptus Astartes",
             "type": "Battle tactic stratagem",
@@ -1271,6 +1397,15 @@ window.data.push( {
             "max_cost": 2,
             "fluff": "When a battle-brother is gripped in the darkest depths of the Black Rage, only the direst of wounds can penetrate the madness and lay them low.",
             "description": "<p>Use this Stratagem after a <em>DEATH<\/em> <em>COMPANY<\/em> unit from your army is selected as the target of an attack. Until the end of the phase, each time a model in that unit would lose a wound, roll one D6: on a 5+, that wound is not lost. You can only use this Stratagem once per turn. If that unit contains 5 or fewer models, this Stratagem costs 1CP; otherwise, it costs 2CP.<\/p>"
+        },
+        {
+            "title": "Regroup And Strike",
+            "specialism": "Castellans of the Rift",
+            "type": "Battle tactic stratagem",
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "The Castellans regroup to launch a new strike at the enemy, retaining the initiative and keeping the foe on their toes.",
+            "description": "<p>Use this Stratagem in your Shooting phase or in the Fight phase, when you select a <em>CASTELLANS<\/em> OF THE <em>RIFT<\/em> unit from your army to shoot or fight. Until the end of the phase, each time a model in that unit makes an attack:<ul><li>If that unit is below its Starting Strength, improve the Armour Penetration characteristic of that attack by 1.<\/li><li>If that unit is below Half-strength, you can re-roll the wound roll.<\/li><\/ul><\/p>"
         },
         {
             "title": "Reject The Flesh, Embrace The Machine",
@@ -1426,6 +1561,15 @@ window.data.push( {
             "description": "<p>Use this Stratagem at the end of your turn. Select one <em>RAVEN<\/em> <em>GUARD<\/em> unit from your army (excluding <em>BUILDINGS<\/em>) that did not make any attacks during that turn. Until the start of your next turn, when resolving an attack made with a ranged weapon against that unit, subtract 1 from the hit roll.<\/p>"
         },
         {
+            "title": "Seismic Devastation",
+            "specialism": "Imperial Fists Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "Under the ferocious barrage of attacks unleashed by the Siegebreaker Cohort, barricades collapse and even armoured vehicles are torn into flaming ruin.",
+            "description": "<p>Use this Stratagem at the start of the Shooting phase or Fight phase. Pick a <em>SIEGEBREAKER<\/em> <em>COHORT<\/em> unit from your army. Each time you roll an unmodified wound roll of a 6 for an attack made by that unit that targets an enemy <em>VEHICLE<\/em> that phase, that attack inflicts a mortal wound in addition to its normal damage.<\/p>"
+        },
+        {
             "title": "Self Sacrifice",
             "specialism": "Salamanders",
             "type": "Strategic ploy stratagem",
@@ -1460,6 +1604,15 @@ window.data.push( {
             "max_cost": null,
             "fluff": "Unknown stealth technologies are hidden within each Corvus Blackstar.",
             "description": "<p>Use this Stratagem at the start of the first battle round. Select one <em>CORVUS<\/em> <em>BLACKSTAR<\/em> unit from your army. Until the end of the battle round, that unit cannot be selected as a target for ranged attacks unless it is the closest eligible target to the firing model.<\/p>"
+        },
+        {
+            "title": "Signal The Attack",
+            "specialism": "Dark Angels Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "As soon as one Attack Squadron has wounded its target, the others in its formation circle like vultures to complete the kill.",
+            "description": "<p>Use this Stratagem after an <em>ATTACK<\/em> <em>SQUADRON<\/em> unit from your army has attacked an enemy unit in the Shooting phase and the attack resulted in the enemy unit losing one or more wounds. Add 1 to hit rolls for attacks made by other <em>ATTACK<\/em> <em>SQUADRON<\/em> units from your army that target the same enemy unit this phase.<\/p>"
         },
         {
             "title": "Skilled Riders",
@@ -1561,6 +1714,15 @@ window.data.push( {
             "description": "<p>Use this Stratagem at the start of your Movement phase. Select one <em>ULTRAMARINES<\/em> <em>INFANTRY<\/em> or <em>ULTRAMARINES<\/em> <em>BIKER<\/em> unit from your army, then select either the Devastator, Tactical or Assault Doctrine. Until the start of your next Movement phase, that unit gains the bonus of that combat doctrine instead of the active combat doctrine.<\/p>"
         },
         {
+            "title": "Stalker Pack",
+            "specialism": "Specialist Detachment Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "From the shadows come Space Wolves Stalker Packs, pursuing their quarry with unwavering ferocity. Once the enemy realises they are being pursued, it is often too late to evade their fate.",
+            "description": "<p>Use this Stratagem when choosing your army. Pick a <em>SPACE<\/em> <em>WOLVES<\/em> Detachment from your army to be a Stalker Pack Specialist Detachment. <em>BATTLE<\/em> <em>LEADERS<\/em>, <em>BLOOD<\/em> <em>CLAWS<\/em> and <em>REIVERS<\/em> in that Detachment gain the <em>STALKER<\/em> <em>PACK<\/em> keyword.<\/p>"
+        },
+        {
             "title": "Stand Your Ground",
             "specialism": "Salamanders",
             "type": "Battle tactic stratagem",
@@ -1624,6 +1786,15 @@ window.data.push( {
             "description": "<p>Use this Stratagem at the start of the Fight phase. Select one <em>SALAMANDERS<\/em> unit from your army. Until the end of that phase, add 1 to the Strength characteristic of models in that unit, and when resolving an attack made with a melee weapon by a model in that unit, on an unmodified wound roll of 6 double the Damage characteristic of that weapon for that attack.<\/p>"
         },
         {
+            "title": "Strike First, For Ultramar!",
+            "specialism": "Ultramarines Stratagem",
+            "type": null,
+            "min_cost": 3,
+            "max_cost": null,
+            "fluff": "As the enemy close in, the Victrix Guard hold their weapons ready to deliver the first blow.",
+            "description": "<p>Use this Stratagem at the end of your opponent\u2019s Charge phase. Pick a <em>VICTRIX<\/em> <em>GUARD<\/em> unit from your army that was charged this phase, or that performed a Heroic Intervention this phase. That unit can immediately pile in and fight as if it were the Fight phase (doing so does not prevent the unit from being picked to fight in the Fight phase of that turn).<\/p>"
+        },
+        {
             "title": "Strike For The Heart",
             "specialism": "White Scars",
             "type": "Battle tactic stratagem",
@@ -1651,6 +1822,24 @@ window.data.push( {
             "description": "<p>Use this Stratagem at the start of your Charge phase. Select one <em>RAVEN<\/em> <em>GUARD<\/em> <em>JUMP<\/em> <em>PACK<\/em> unit. Until the end of that phase, that unit can be chosen to charge with even if it Advanced this turn, and when a charge roll is made for that unit, add 1 to the result.<\/p>"
         },
         {
+            "title": "Structural Demolition",
+            "specialism": "Imperial Fists Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "With pinpoint accuracy, enemy fortifications are reduced to rubble in moments, crushing those trapped within.",
+            "description": "<p>Use this Stratagem after a Building has been destroyed by an attack made by a <em>SIEGEBREAKER<\/em> <em>COHORT<\/em> unit from your army. Roll 2D6 instead of 1 for each model that disembarks from that <em>BUILDING<\/em>. For each roll of 1, a model that disembarked (controlling player\u2019s choice) is slain.<\/p>"
+        },
+        {
+            "title": "Suffer Not The Unclean To Live",
+            "specialism": "Black Templars Stratagem",
+            "type": null,
+            "min_cost": 2,
+            "max_cost": null,
+            "fluff": "With righteous zeal, these warriors vow to vanquish Mankind\u2019s foes in the name of the Holy Emperor.",
+            "description": "<p>Use this Stratagem at the start of the Fight phase. Pick a <em>SWORD<\/em> <em>BRETHREN<\/em> unit from your army. Add 1 to the Attacks characteristic of models in that unit for this phase. In addition, you can re-roll wound rolls for attacks made by that unit until the end of that phase.<\/p>"
+        },
+        {
             "title": "Suppression Fire",
             "specialism": "Adeptus Astartes",
             "type": "Strategic ploy stratagem",
@@ -1667,6 +1856,15 @@ window.data.push( {
             "max_cost": 3,
             "fluff": "The Ravenwing strike swiftly and withdraw before the foe can react.",
             "description": "<p>Use this Stratagem in the Fight phase, after a <em>RAVENWING<\/em> unit from your army has fought. If that unit is within Engagement Range of any enemy units, it can Fall Back as if it were the Movement phase. Otherwise, it can make a Normal Move as if it were the Movement phase. If that unit contains 5 or fewer models, this Stratagem costs 2CP; otherwise, it costs 3CP.<\/p>"
+        },
+        {
+            "title": "Sword Brethren",
+            "specialism": "Specialist Detachment Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "It is the ambition of every Black Templar Initiate to be elevated to the esteemed ranks of the Sword Brethren, for these warrior-knights are the elites of their Chapter.",
+            "description": "<p>Use this Stratagem when choosing your army. Pick a <em>BLACK<\/em> <em>TEMPLARS<\/em> Detachment from your army to be a Sword Brethren Specialist Detachment. <em>HIGH<\/em> <em>MARSHAL<\/em> <em>HELBRECHT<\/em>, <em>EMPEROR\u2019S<\/em> <em>CHAMPION<\/em>, <em>CAPTAINS<\/em>, <em>COMPANY<\/em> <em>CHAMPIONS<\/em> and <em>COMPANY<\/em> <em>VETERANS<\/em> in that Detachment gain the <em>SWORD<\/em> <em>BRETHREN<\/em> keyword.<\/p>"
         },
         {
             "title": "Synaptic Severance",
@@ -1703,6 +1901,15 @@ window.data.push( {
             "max_cost": null,
             "fluff": "Even amidst the most intense firefights, the Ultramarines fire with pinpoint accuracy, every shot aimed for maximum efficacy and economy of killing power.",
             "description": "<p>Use this Stratagem at the start of your Movement phase if the Tactical Doctrine is active. Until the start of the next battle round, when resolving an attack made with a Rapid Fire or Assault weapon by an <em>ULTRAMARINES<\/em> model from your army, on an unmodified wound roll of 6 the Armour Penetration characteristic of that weapon is improved by an additional 1 for that attack. You can only use this Stratagem once per battle.<\/p>"
+        },
+        {
+            "title": "Take The Fight To Them",
+            "specialism": "Castellans of the Rift",
+            "type": "Strategic ploy stratagem",
+            "min_cost": 2,
+            "max_cost": null,
+            "fluff": "Once the Castellans of the Rift set their minds upon a goal, only the most resolute of foes can stop them.",
+            "description": "<p>Use this Stratagem in your opponent\u2019s Charge phase. Select one <em>CASTELLANS<\/em> OF THE <em>RIFT<\/em> unit from your army. Until the end of the phase:<ul><li>That unit is eligible to perform Heroic Interventions as if it were a <em>CHARACTER<\/em>.<\/li><li>That unit is eligible to perform a Heroic Intervention if it is within 6\" horizontally and 5\" vertically of an enemy unit.<\/li><li>Each time that unit makes a Heroic Intervention move, its models can move up to 6\" instead of 3\". All other rules for Heroic Interventions still apply.<\/li><\/ul><\/p>"
         },
         {
             "title": "Tank Hunters",
@@ -1867,6 +2074,15 @@ window.data.push( {
             "description": "<p>Use this Stratagem in your Shooting phase, when a <em>SILVER<\/em> <em>TEMPLARS<\/em> <em>PRIMARIS<\/em> <em>CORE<\/em> unit from your army is selected to shoot, or in the Fight phase, when a <em>SILVER<\/em> <em>TEMPLARS<\/em> <em>PRIMARIS<\/em> <em>CORE<\/em> unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes an attack against a <em>CHARACTER<\/em> unit, add 1 to that attack\u2019s hit roll. If that unit contains 5 or fewer models, this Stratagem costs 1CP; otherwise, it costs 2CP.<\/p>"
         },
         {
+            "title": "This Is Our Ground!",
+            "specialism": "Castellans of the Rift",
+            "type": "Epic deed stratagem",
+            "min_cost": 2,
+            "max_cost": null,
+            "fluff": "When fighting to secure key ground, the Castellans of the Rift tap into their last reserves of strength to ensure victory.",
+            "description": "<p>Use this Stratagem at the end of your Charge phase. Select one <em>CASTELLANS<\/em> OF THE <em>RIFT<\/em> unit from your army within range of one objective marker. Until the start of your next Charge phase, that unit gains the Objective Secured ability. If a model in that unit already has this ability, it counts as one additional model when determining control of an objective marker. You can only use this Stratagem once.<\/p>"
+        },
+        {
             "title": "Token Of Brotherhood",
             "specialism": "Raven Guard",
             "type": "Requisition stratagem",
@@ -1921,6 +2137,15 @@ window.data.push( {
             "description": "<p>Use this Stratagem at the end of the Heroic Interventions step of your opponent\u2019s Charge phase. Select one <em>SANGUINARY<\/em> <em>GUARD<\/em> unit from your army that is within 6\" horizontally and 5\" vertically of any enemy units. The selected unit is eligible to perform a Heroic Intervention as if it were a <em>CHARACTER<\/em> unit, and when performing that Heroic Intervention, each model in that unit can move up to 6\" instead of 3\". All other rules for Heroic Interventions still apply.<\/p>"
         },
         {
+            "title": "Unbroken And Unbowed",
+            "specialism": "Castellans of the Rift",
+            "type": "Battle tactic stratagem",
+            "min_cost": 2,
+            "max_cost": 3,
+            "fluff": "Even when under extremely heavy fire, the Castellans of the Rift hold their ground.",
+            "description": "<p>Use this Stratagem in your opponent\u2019s Shooting phase, when a <em>CASTELLANS<\/em> OF THE <em>RIFT<\/em> <em>CORE<\/em> <em>INFANTRY<\/em> unit from your army is selected as the target of an attack. While that unit is within range of an objective marker, each time a model in that unit would lose a wound, roll one D6: on a 5+, that wound is not lost.If that unit has 5 or fewer models, this Stratagem costs 2CP; otherwise, it costs 3CP.<\/p>"
+        },
+        {
             "title": "Uncompromising Fire",
             "specialism": "Adeptus Astartes",
             "type": "Strategic ploy stratagem",
@@ -1930,6 +2155,15 @@ window.data.push( {
             "description": "<p>Use this Stratagem in your Shooting phase. Select one <em>ADEPTUS<\/em> <em>ASTARTES<\/em> <em>INFANTRY<\/em> unit from your army that is performing an action. That unit can shoot this phase without that action failing.<\/p>"
         },
         {
+            "title": "Unfailing Nerve",
+            "specialism": "Castellans of the Rift",
+            "type": "Battle tactic stratagem",
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "The Castellans hold firm in the face of charging foes, waiting until they can see the white of their eyes before opening fire.",
+            "description": "<p>Use this Stratagem in your Shooting phase, when a <em>CASTELLANS<\/em> OF THE <em>RIFT<\/em> <em>CORE<\/em> unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes an attack with a bolt weapon that targets a unit within half range, improve the Armour Penetration characteristic of that attack by 1.<\/p>"
+        },
+        {
             "title": "Unyielding In The Face Of The Foe",
             "specialism": "Adeptus Astartes",
             "type": "Battle tactic stratagem",
@@ -1937,6 +2171,15 @@ window.data.push( {
             "max_cost": null,
             "fluff": "Those clad in Gravis armour are walking ceramite strongpoints.",
             "description": "<p>Use this Stratagem in any phase, when a <em>MK<\/em> <em>X<\/em> <em>GRAVIS<\/em> unit from your army selected as the target of an attack. Until the end of the phase, each time an attack with a Damage characteristic of 1 is allocated to a model in that unit, add 1 to any armour saving throw made against that attack.<\/p>"
+        },
+        {
+            "title": "Uphold The Honour Of The Emperor",
+            "specialism": "Black Templars Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "The Black Templars\u2019 faith in the Emperor is so strong they are able to shrug off even the most severe wounds.",
+            "description": "<p>Use this Stratagem at the start of the Fight phase. Pick a <em>SWORD<\/em> <em>BRETHREN<\/em> unit from your army. Until the end of that phase, roll a D6 each time a model in that unit loses a wound. On a 5+, that model does not lose that wound.<\/p>"
         },
         {
             "title": "Upon Wings Of Fire",
@@ -1982,6 +2225,15 @@ window.data.push( {
             "max_cost": null,
             "fluff": "Every blow struck against a Black Templar is answered in kind. Even as they are laid low, their blades still lash out at the enemies of the divine Emperor.",
             "description": "<p>Use this Stratagem at the start of the Fight phase. Select one <em>BLACK<\/em> <em>TEMPLARS<\/em> <em>CORE<\/em> unit from your army. Until the end of the phase, each time a model in that unit is destroyed by a melee attack and does not explode, roll one D6: on a 5+, after the attacking models unit has finished making its attacks, it suffers 1 mortal wound (a unit can suffer a maximum of 6 mortal wounds per phase as the result of this ability).<\/p>"
+        },
+        {
+            "title": "Victrix Guard",
+            "specialism": "Specialist Detachment Stratagem",
+            "type": null,
+            "min_cost": 1,
+            "max_cost": null,
+            "fluff": "The Victrix Guard are veteran warriors with countless centuries of combat experience between them.",
+            "description": "<p>Use this Stratagem when choosing your army. Pick an <em>ULTRAMARINES<\/em> Detachment from your army to be a Victrix Guard Specialist Detachment. <em>CAPTAINS<\/em>, <em>ANCIENTS<\/em>, <em>HONOUR<\/em> <em>GUARD<\/em>, <em>VICTRIX<\/em> <em>HONOUR<\/em> <em>GUARD<\/em>, <em>VANGUARD<\/em> <em>VETERAN<\/em> <em>SQUADS<\/em> and <em>STERNGUARD<\/em> <em>VETERAN<\/em> <em>SQUADS<\/em> in that Detachment gain the <em>VICTRIX<\/em> <em>GUARD<\/em> keyword.<\/p>"
         },
         {
             "title": "Visions Of Sanguinius",

@@ -3,6 +3,7 @@ self.addEventListener('install', (e) => {
     caches.open('stratablet-v1').then((cache) => cache.addAll([
       'index.html',
       'main.js',
+      'data/astramilitarum.js',
       'data/craftworlds.js',
       'data/spacemarines.js',
       'data/tau.js',
@@ -19,7 +20,11 @@ self.addEventListener('install', (e) => {
       'resources/icons/64.png',
       'resources/icons/128.png',
       'resources/icons/256.png', 
-      'resources/icons/512.png'
+      'resources/icons/512.png',
+      'resources/img/astra-militarum.svg',
+      'resources/img/aeldari-craftworld.svg',
+      'resources/img/space-marines.svg',
+      'resources/img/tau-empire.svg'
     ])),
   );
 });

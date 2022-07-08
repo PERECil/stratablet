@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
     for(const stratagem of data.stratagems)
     {
       const className = stratagem.title.toLowerCase().replaceAll(' ', '-');
-      const typeClass = stratagem.type.toLowerCase().replace(' stratagem', '').replaceAll(' ', '-');
+      const typeClass = stratagem.type?.toLowerCase().replace(' stratagem', '').replaceAll(' ', '-');
       const state = ( window.localStorage.getItem(className) ?? "true" ) === "true";
 
       document.querySelector('#setup ol').innerHTML += '<li><input type="checkbox" class="switch" id="switch-' + className + '" autocomplete="off" ' + ( state === true ? 'checked="checked" ' : ' ' ) + '/><label class="configuration-item" id="label-switch-' + className + '" for="switch-' + className + '" data-class="' + className + '">Show "' + stratagem.title + '" on the list</label>' + stratagem.description + '</li>';
@@ -28,10 +28,20 @@ window.addEventListener('load', () => {
 
       let html = "";
 
+      types = [];
+
+      if( stratagem.type !== null ) {
+        types.push(stratagem.type);
+      }
+
+      if( stratagem.specialism !== null) {
+        types.push(stratagem.specialism);
+      }
+
       html += '<div class="stratagem ' + className + ( state === true ? '' : ' hidden' ) + '">';
       html += '   <span class="cost">' + stratagem.min_cost + 'CP' + ( stratagem.max_cost ? '/' + stratagem.max_cost + 'CP' : '' ) + '</span>';
       html += '   <h2 id="' + className + '" class="' + typeClass + '">' + stratagem.title + '</h2>';
-      html += '   <p class="type">' + stratagem.type + ( stratagem.specialism === null ? '' : ' - ' + stratagem.specialism ) +  '</p>';
+      html += '   <p class="type">' + types.join( ' - ' ) + '</p>';
       html += '   <section class="description">' + stratagem.description + '</section>';
       html += '</div>';
 
