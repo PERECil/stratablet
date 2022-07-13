@@ -19,8 +19,8 @@ window.addEventListener('load', () => {
 
     for(const stratagem of data.stratagems)
     {
-      const className = stratagem.title.toLowerCase().replaceAll(' ', '-');
-      const typeClass = stratagem.type?.toLowerCase().replace(' stratagem', '').replaceAll(' ', '-');
+      const className = data.id + '-' + stratagem.title.toLowerCase().replaceAll(/[^a-zA-Z]/g, '-').replaceAll( /-*$/g, '' );
+      const typeClass = stratagem.type?.toLowerCase().replace(' stratagem', '').replaceAll(/[^a-zA-Z]/g, '-').replaceAll( /-*$/g, '' );
       const state = ( window.localStorage.getItem(className) ?? "true" ) === "true";
 
       document.querySelector('#setup ol').innerHTML += '<li><input type="checkbox" class="switch" id="switch-' + className + '" autocomplete="off" ' + ( state === true ? 'checked="checked" ' : ' ' ) + '/><label class="configuration-item" id="label-switch-' + className + '" for="switch-' + className + '" data-class="' + className + '">Show "' + stratagem.title + '" on the list</label>' + stratagem.description + '</li>';
