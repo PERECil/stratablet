@@ -1,12 +1,13 @@
 self.addEventListener('install', (e) => {
   e.waitUntil(
-    caches.open('stratablet-v2').then((cache) => cache.addAll([
+    caches.open('stratablet-v3').then((cache) => cache.addAll([
       'index.html',
       'main.js',
       'data/astramilitarum.js',
       'data/craftworlds.js',
       'data/spacemarines.js',
       'data/tau.js',
+      'data/adeptuscustodes.js',
       'style.css',
       'resources/fonts/Conduit-ExtraBold.otf',
       'resources/fonts/Conduit-Regular.ttf',

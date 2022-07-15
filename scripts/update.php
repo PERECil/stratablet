@@ -139,3 +139,4 @@ leech( 'Xenos', 'Aeldari - Craftworlds', 'aeldari-craftworlds', '../data/craftwo
 leech( 'Imperium', 'Space Marines', 'space-marines', '../data/spacemarines.js', 'https://wahapedia.ru/wh40k9ed/factions/space-marines/#Stratagems');
 leech( 'Imperium', 'Astra Militarum', 'astra-militarum', '../data/astramilitarum.js', 'https://wahapedia.ru/wh40k9ed/factions/astra-militarum/#Stratagems');
 leech( 'Xenos', 'T\'au Empire', 'tau-empire', '../data/tau.js', 'https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Stratagems');
+leech( 'Imperium', 'Adeptus Custodes', 'adeptus-custodes', '../data/adeptuscustodes.js', 'https://wahapedia.ru/wh40k9ed/factions/adeptus-custodes/#Stratagems');
