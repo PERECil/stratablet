@@ -8,6 +8,7 @@ self.addEventListener('install', (e) => {
       'data/spacemarines.js',
       'data/tau.js',
       'data/adeptuscustodes.js',
+      'data/thousandsons.js',
       'style.css',
       'resources/fonts/Conduit-ExtraBold.otf',
       'resources/fonts/Conduit-Regular.ttf',
@@ -25,7 +26,9 @@ self.addEventListener('install', (e) => {
       'resources/img/astra-militarum.svg',
       'resources/img/aeldari-craftworld.svg',
       'resources/img/space-marines.svg',
-      'resources/img/tau-empire.svg'
+      'resources/img/tau-empire.svg',
+      'resources/img/adeptus-custodes.svg',
+      'resources/img/thousand-sons.svg'
     ])),
   );
 });
