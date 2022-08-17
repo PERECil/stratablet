@@ -283,15 +283,6 @@ window.data.push( {
             "description": "<p>Use this Stratagem in your Shooting phase, when a <em>THOUSAND<\/em> <em>SONS<\/em> unit from your army is selected to shoot. Until the end of the phase, soulreaper cannons models in that unit are equipped with gain the following ability: \u2018Each time an attack is made with this weapon against a unit that contains 11 or more models, make 2 hit rolls instead of 1.\u2019<\/p>"
         },
         {
-            "title": "Transhuman Physiology",
-            "specialism": "Adeptus Astartes",
-            "type": "Battle tactic stratagem",
-            "min_cost": 1,
-            "max_cost": 2,
-            "fluff": "Space Marines can fight through even the most grievous of wounds.",
-            "description": "<p>Use this Stratagem in any phase, when a <em>PRIMARIS<\/em> unit from your army is selected as the target of an attack. Until the end of the phase, each time an attack is made against that unit, an unmodified wound roll of 1-3 for that attack fails, irrespective of any abilities that the weapon or the model making the attack may have. If that unit contains 5 or fewer models, this Stratagem costs 1CP; otherwise, it costs 2CP.<\/p>"
-        },
-        {
             "title": "Twisted Mirage",
             "specialism": "Warpmeld Pact",
             "type": "Strategic ploy stratagem",

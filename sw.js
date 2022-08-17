@@ -1,6 +1,6 @@
 self.addEventListener('install', (e) => {
   e.waitUntil(
-    caches.open('stratablet-v3').then((cache) => cache.addAll([
+    caches.open('stratablet-v4').then((cache) => cache.addAll([
       'index.html',
       'main.js',
       'data/astramilitarum.js',
