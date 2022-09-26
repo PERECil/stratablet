@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
         <script type="text/javascript" src="main.js" defer></script>
+        <script type="text/javascript" src="data/presets.js" defer></script>
         <script type="text/javascript" src="data/craftworlds.js" defer></script>
         <script type="text/javascript" src="data/astramilitarum.js" defer></script>
         <script type="text/javascript" src="data/spacemarines.js" defer></script>
@@ -17,17 +18,33 @@
         <title>Stratablet</title>
     </head>
     <body>
-        <input type="checkbox" autocomplete="off" id="setup-collapse" />
-        <nav id="setup">
-            <h2>Stratagem configuration</h2>
-            <label id="close-setup" for="setup-collapse"></label>
-            <ul id="factions"></ul>
-            <ol></ol>
-        </nav>
-        <input type="checkbox" autocomplete="off" id="sidebar-collapse" />
-        <nav id="sidebar"></nav>
-        <label id="sidebar-button" for="sidebar-collapse"></label>
-        <label id="setup-button" for="setup-collapse"></label>
-        <article></article>
+        <section id="main" class="screen">
+            <input type="checkbox" autocomplete="off" id="main-sidebar-collapse" class="sidebar-collapse" />
+            <nav class="sidebar"></nav>
+            <label class="control-button" id="show-main-sidebar" for="main-sidebar-collapse"></label>
+            <label class="control-button" id="show-setup-button" for="setup-screen-control"></label>
+            <article></article>
+        </section>
+        <input type="checkbox" autocomplete="off" id="setup-screen-control" class="screen-collapse" />
+        <section id="setup" class="hidden screen">
+            <input type="checkbox" autocomplete="off" id="setup-sidebar-collapse" class="sidebar-collapse" />
+            <nav class="sidebar"></nav>
+            <label class="control-button" id="show-setup-sidebar" for="setup-sidebar-collapse"></label>
+            <label class="control-button" id="hide-setup-button" for="setup-screen-control"></label>
+            <label class="control-button" id="save-setup-button" for="save-prompt-control"></label>
+            <article>
+                <ol></ol>
+            </article>
+            <input type="checkbox" autocomplete="off" id="save-prompt-control" class="overlay-collapse" />
+            <div id="save-prompt" class="hidden overlay">
+                <div class="window">
+                    <input type="text" placeholder="Name of the list" id="configuration-name" />
+                    <div class="button-group">
+                        <label class="control-label" id="process-save" for="save-prompt-control">Save</label>
+                        <label class="control-label" id="hide-save-prompt" for="save-prompt-control">Cancel</label>
+                    </div>
+                </div>
+            </div>
+        </section>
     </body>
 </html>

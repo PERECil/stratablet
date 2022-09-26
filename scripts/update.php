@@ -11,7 +11,7 @@ function fix_specialism(string $specialism)
     return $specialism;
 }
 
-function leech(string $group, string $faction, string $id, string $path, string $url)
+function leech(string $group, string $faction, string $id, int $key, string $path, string $url)
 {
     $contents = file_get_contents($url);
 
@@ -130,14 +130,15 @@ function leech(string $group, string $faction, string $id, string $path, string 
     $data->group = $group;
     $data->faction = $faction;
     $data->id = $id;
+    $data->key = $key;
     $data->stratagems = $stratagems;
     
     file_put_contents( $path, 'window.data.push( '.json_encode($data, JSON_PRETTY_PRINT ).');' );
 }
 
-// leech( 'Xenos', 'Aeldari - Craftworlds', 'aeldari-craftworlds', '../data/craftworlds.js', 'https://wahapedia.ru/wh40k9ed/factions/aeldari/#Stratagems');
-// leech( 'Imperium', 'Space Marines', 'space-marines', '../data/spacemarines.js', 'https://wahapedia.ru/wh40k9ed/factions/space-marines/#Stratagems');
-// leech( 'Imperium', 'Astra Militarum', 'astra-militarum', '../data/astramilitarum.js', 'https://wahapedia.ru/wh40k9ed/factions/astra-militarum/#Stratagems');
-// leech( 'Xenos', 'T\'au Empire', 'tau-empire', '../data/tau.js', 'https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Stratagems');
-// leech( 'Imperium', 'Adeptus Custodes', 'adeptus-custodes', '../data/adeptuscustodes.js', 'https://wahapedia.ru/wh40k9ed/factions/adeptus-custodes/#Stratagems');
-leech( 'Chaos', 'Thousand sons', 'thousand-sons', '../data/thousandsons.js', 'https://wahapedia.ru/wh40k9ed/factions/thousand-sons/#Stratagems' );
+// leech( 'Imperium', 'Adeptus Custodes', 'adeptus-custodes', 1, '../data/adeptuscustodes.js', 'https://wahapedia.ru/wh40k9ed/factions/adeptus-custodes/#Stratagems');
+// leech( 'Imperium', 'Astra Militarum', 'astra-militarum', 2, '../data/astramilitarum.js', 'https://wahapedia.ru/wh40k9ed/factions/astra-militarum/#Stratagems');
+// leech( 'Xenos', 'Aeldari - Craftworlds', 'aeldari-craftworlds', 3, '../data/craftworlds.js', 'https://wahapedia.ru/wh40k9ed/factions/aeldari/#Stratagems');
+// leech( 'Imperium', 'Space Marines', 'space-marines', 4, '../data/spacemarines.js', 'https://wahapedia.ru/wh40k9ed/factions/space-marines/#Stratagems');
+// leech( 'Xenos', 'T\'au Empire', 'tau-empire', 5, '../data/tau.js', 'https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Stratagems');
+leech( 'Chaos', 'Thousand sons', 'thousand-sons', 6, '../data/thousandsons.js', 'https://wahapedia.ru/wh40k9ed/factions/thousand-sons/#Stratagems' );

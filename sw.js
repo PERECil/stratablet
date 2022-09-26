@@ -3,6 +3,7 @@ self.addEventListener('install', (e) => {
     caches.open('stratablet-v4').then((cache) => cache.addAll([
       'index.html',
       'main.js',
+      'data/presets.js',
       'data/astramilitarum.js',
       'data/craftworlds.js',
       'data/spacemarines.js',

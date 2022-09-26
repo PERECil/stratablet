@@ -9,22 +9,82 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+// Sidebar closing gestures
+window.addEventListener('load', () => {
+  let touchstartX = 0;
+  let touchendX = 0;
+
+  const gestureZone = document.querySelectorAll('.sidebar');
+
+  gestureZone.forEach( item => {
+    item.addEventListener('touchstart', function(event) {
+      touchstartX = event.changedTouches[0].screenX;
+    }, false);
+  });
+
+  gestureZone.forEach( item => {
+    item.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].screenX;
+        handleGesture(item);
+    }, false); 
+  });
+
+  gestureZone.forEach( item => {
+    item.addEventListener('mousedown', function(event) {
+      touchstartX = event.clientX;
+    }, false);
+  });
+
+  gestureZone.forEach( item => {
+    item.addEventListener('mouseup', function(event) {
+      touchendX = event.clientX;
+      handleGesture(item);
+    }, false); 
+  });
+
+  function handleGesture(item) {
+      // Add a small threshold of 100px to avoid false swipes
+      if (touchendX + 100 < touchstartX) {
+          item.previousElementSibling.checked = false;
+      }
+  }
+});
+
 window.addEventListener('load', () => {
 
-  let loadStratagems = function (data) {
+  let loadStratagems = function (identifier) {
 
-    document.querySelector('#setup ol').innerHTML = '';
-    document.querySelector('#sidebar').innerHTML = '';
-    document.querySelector('article').innerHTML = '';
+    let currentFaction = null;
 
-    for(const stratagem of data.stratagems)
+    // Look up for the id
+    for(let i in window.data) {
+      let faction = window.data[i];
+
+      if(faction.id === identifier) {
+        currentFaction = faction;
+      }
+    }
+
+    // Last chance fallback, use the first item
+    if(currentFaction === null) {
+      currentFaction = window.data[0];
+    }
+
+    window.localStorage.setItem( 'faction', currentFaction.id );
+
+    document.querySelector('#setup article').innerHTML = '';
+    document.querySelector('#main .sidebar').innerHTML = '';
+    document.querySelector('#main article').innerHTML = '';
+
+    // Fill stratagems on the main app
+    for(const stratagem of currentFaction.stratagems)
     {
-      const className = data.id + '-' + stratagem.title.toLowerCase().replaceAll(/[^a-zA-Z]/g, '-').replaceAll( /-*$/g, '' );
+      const className = currentFaction.id + '-' + stratagem.title.toLowerCase().replaceAll(/[^a-zA-Z]/g, '-').replaceAll( /-*$/g, '' );
       const typeClass = stratagem.type?.toLowerCase().replace(' stratagem', '').replaceAll(/[^a-zA-Z]/g, '-').replaceAll( /-*$/g, '' );
       const state = ( window.localStorage.getItem(className) ?? "true" ) === "true";
 
-      document.querySelector('#setup ol').innerHTML += '<li><input type="checkbox" class="switch" id="switch-' + className + '" autocomplete="off" ' + ( state === true ? 'checked="checked" ' : ' ' ) + '/><label class="configuration-item" id="label-switch-' + className + '" for="switch-' + className + '" data-class="' + className + '">Show "' + stratagem.title + '" on the list</label>' + stratagem.description + '</li>';
-      document.querySelector('#sidebar').innerHTML += '<a href="#' + className + '" class="' + className + ( state === true ? '' : ' hidden' ) + '">' + stratagem.title + '</a>';
+      // Add the element to the main sidebar
+      document.querySelector('#main .sidebar').innerHTML += '<a href="#' + className + '" class="' + className + ( state === true ? '' : ' hidden' ) + '">' + stratagem.title + '</a>';
 
       let html = "";
 
@@ -39,23 +99,121 @@ window.addEventListener('load', () => {
       }
 
       html += '<div class="stratagem ' + className + ( state === true ? '' : ' hidden' ) + '">';
-      html += '   <span class="cost">' + stratagem.min_cost + 'CP' + ( stratagem.max_cost ? '/' + stratagem.max_cost + 'CP' : '' ) + '</span>';
-      html += '   <h2 id="' + className + '" class="' + typeClass + '">' + stratagem.title + '</h2>';
-      html += '   <p class="type">' + types.join( ' - ' ) + '</p>';
-      html += '   <section class="description">' + stratagem.description + '</section>';
+      html += '  <h2 id="' + className + '" class="' + typeClass + '">';
+      html += '    <span>' + stratagem.title + '</span>';
+      html += '    <span class="cost">' + stratagem.min_cost + 'CP' + ( stratagem.max_cost ? '/' + stratagem.max_cost + 'CP' : '' ) + '</span>';
+      html += '  </h2>';
+      html += '  <p class="type">' + types.join( ' - ' ) + '</p>';
+      html += '  <section class="description">' + stratagem.description + '</section>';
       html += '</div>';
 
-      document.querySelector('article').innerHTML += html;
+      document.querySelector('#main article').innerHTML += html;
     }
 
+    document.getElementById( 'setup' ).setAttribute( 'data-faction-id', currentFaction.id );
+
+    // Fill stratagems on setup screen
+    for(const stratagem of currentFaction.stratagems)
+    {
+      const className = currentFaction.id + '-' + stratagem.title.toLowerCase().replaceAll(/[^a-zA-Z]/g, '-').replaceAll( /-*$/g, '' );
+      const typeClass = stratagem.type?.toLowerCase().replace(' stratagem', '').replaceAll(/[^a-zA-Z]/g, '-').replaceAll( /-*$/g, '' );
+      const state = ( window.localStorage.getItem(className) ?? "true" ) === "true";
+  
+      let html = "";
+  
+      html += '<div class="stratagem ' + className + '">';
+      html += '  <input type="checkbox" data-stratagem-id="'+ stratagem.id + '" class="switch" id="switch-' + className + '" autocomplete="off" ' + ( state === true ? 'checked="checked" ' : ' ' ) + '/>';
+      html += '  <label class="configuration-item" id="label-switch-' + className + '" for="switch-' + className + '" data-class="' + className + '">Show "' + stratagem.title + '" on the list</label>';
+      html += '  <section class="description">' + stratagem.description + '</section>';
+      html += '</div>';
+  
+      document.querySelector('#setup article').innerHTML += html;
+    }
   }
 
-  document.getElementById( 'sidebar' ).addEventListener( 'click', (e) => {
+  // Close off the sidebar when a stratagem has been selected
+  document.querySelector( '#main .sidebar' ).addEventListener( 'click', (e) => {
     if (e.target && e.target.matches('a')) {
-      document.getElementById( 'sidebar-collapse' ).checked = false;
+      document.getElementById( 'main-sidebar-collapse' ).checked = false;
     }
   });
 
+  // When clicking on a faction, set the faction on the main screen
+  document.querySelector( '#setup .sidebar' ).addEventListener( 'click', (e) => {
+    if (e.target && e.target.matches('[data-faction-id]')) {
+      let source = e.target.getAttribute( 'data-faction-id' );
+      window.localStorage.setItem('faction', source);
+      loadStratagems(source);
+    }
+  });
+
+  // When clicking on a preset, set the preset
+  document.querySelector( '#setup .sidebar' ).addEventListener( 'click', (e) => {
+    if (e.target && e.target.matches('[data-preset-id]')) {
+      let presetId = e.target.getAttribute( 'data-preset-id' );
+
+      // Locate the preset
+      let preset = null; 
+
+      for( faction of window.presets ) {
+        for( candidate of faction.presets ) {
+          if(candidate.id === presetId) {
+            preset = candidate;
+          }
+        }
+      }
+
+      // Enable the stratagems
+      if(e.target.checked) {
+        for(stratagemId of preset.stratagems) {
+          let elt = document.querySelector( '#setup article [data-stratagem-id="' + stratagemId + '"]' );
+  
+          if(elt.checked == false) {
+            console.log( 'enable stratagem id ' + stratagemId );
+            elt.click();
+          }
+        }
+      }
+
+      // Disable the stratagems
+      if(!e.target.checked) {
+        for(stratagemId of preset.stratagems) {
+          let elt = document.querySelector( '#setup article [data-stratagem-id="' + stratagemId + '"]' );
+  
+          if(elt.checked == true) {
+            console.log( 'disable stratagem id ' + stratagemId );
+            elt.click();
+          }
+        }
+      }
+
+    }
+  });
+
+  // Save preset function
+  document.getElementById( 'process-save' ).addEventListener( 'click', (e) => {
+
+    const genRanHex = size => [...Array(size)].map(() => Math.floor(Math.random() * 16).toString(16)).join('');
+
+    let preset = {};
+
+    preset.id = genRanHex(6);
+    preset.is_default = false;
+    preset.name = document.getElementById( 'configuration-name').value;
+    preset.stratagems = [];
+
+    console.log( document.getElementById( 'setup' ).getAttribute( 'data-faction-id' ) );
+
+    document.querySelectorAll( '#setup article input' ).forEach( (item) => {
+      if( item.checked ) {
+        preset.stratagems.push(item.getAttribute( 'data-stratagem-id' ));
+      }
+    });
+
+    console.log(JSON.stringify(preset));
+  });
+
+  // Show and hide items
   document.getElementById( 'setup' ).addEventListener( 'click', (e) => {
 
     if (e.target && e.target.matches('.configuration-item')) {
@@ -64,35 +222,44 @@ window.addEventListener('load', () => {
 
       window.localStorage.setItem( className, (!state).toString() );
 
-      for(let target of document.querySelectorAll( '.' + className )) {
+      for(let target of document.querySelectorAll( '#main .' + className )) {
         target.classList.toggle( 'hidden', state );
       }
     }
-
-    if (e.target && e.target.matches('[data-source]')) {
-      let source = e.target.getAttribute( 'data-source');
-      window.localStorage.setItem('faction', source);
-      loadStratagems(window.data[parseInt(source,10)]);
-    }
   });
 
-  for( var i = 0; i < window.data.length; i++ ) 
+  // Show and hide stratagems on setup
+
+  // Setup presets
+  let html = '';
+
+  for( let faction of window.presets ) 
   {
-      let faction = window.data[i];
-      let button = '';
-      
-      button += '<input type="radio" name="faction" id="' + faction.id + '" autocomplete="off" />';
-      button += '<label id="label-' + faction.id + '" for="' + faction.id + '">';
-      button += '  <img src="resources/img/factions/' + faction.id + '.svg" title="'+ faction.faction +'" data-source="' + i + '" />';
-      button += '  <span>' + faction.faction + '</span>';
-      button += '</label>';
+      html += '<section>';
+      html += '  <input type="radio" name="faction" id="faction-' + faction.id + '" autocomplete="off" />';
+      html += '  <label class="faction" for="faction-' + faction.id + '" data-faction-id="'+ faction.id + '">';
+      html += '    <img src="resources/img/factions/' + faction.icon + '.svg" title="'+ faction.name +'" />';
+      html += '    <span>' + faction.name + '</span>';
+      html += '  </label>';
+      html += '  <div class="faction-presets">';
 
-      document.getElementById( 'factions' ).innerHTML += button;
+      for( let preset of faction.presets )
+      { 
+          html += '    <input type="checkbox" data-preset-id="' + preset.id + '" name="preset-' + preset.id + '" id="preset-' + preset.id + '" autocomplete="off" />';
+          html += '    <label id="label-' + preset.id + '" for="preset-' + preset.id + '">';
+          html += '      <span>' + preset.name + '</span>';
+          html += '    </label>';  
+      }
+
+      html += '  </div>';
+      html += '</section>';
   }
+
+  document.querySelector( '#setup .sidebar' ).innerHTML += html;
   
-  const selectedFaction = parseInt( ( window.localStorage.getItem('faction') ?? "0" ), 10);
+  const selectedFaction = window.localStorage.getItem('faction') ?? "space-marines";
 
-  document.querySelectorAll( '#setup input[type="radio"]' ).item( selectedFaction ).checked = true;
+  document.querySelectorAll( '#setup .sidebar #faction-' + selectedFaction ).checked = true;
 
-  loadStratagems(window.data[selectedFaction]);
-})
+  loadStratagems(selectedFaction);
+});
