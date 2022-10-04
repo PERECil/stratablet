@@ -32,16 +32,30 @@
             <label class="control-button" id="show-setup-sidebar" for="setup-sidebar-collapse"></label>
             <label class="control-button" id="hide-setup-button" for="setup-screen-control"></label>
             <label class="control-button" id="save-setup-button" for="save-prompt-control"></label>
+            <label class="control-button" id="open-setup-button" for="open-prompt-control"></label>
             <article>
                 <ol></ol>
             </article>
             <input type="checkbox" autocomplete="off" id="save-prompt-control" class="overlay-collapse" />
             <div id="save-prompt" class="hidden overlay">
                 <div class="window">
+                    <h3>Save configuration</h3>
                     <input type="text" placeholder="Name of the list" id="configuration-name" />
                     <div class="button-group">
                         <label class="control-label" id="process-save" for="save-prompt-control">Save</label>
                         <label class="control-label" id="hide-save-prompt" for="save-prompt-control">Cancel</label>
+                    </div>
+                </div>
+            </div>
+            <input type="checkbox" autocomplete="off" id="open-prompt-control" class="overlay-collapse" />
+            <div id="open-prompt" class="hidden overlay">
+                <div class="window">
+                    <h3>Open configuration</h3>
+                    <ul id="presets">
+                        <li>Item 1</li>
+                    </ul>
+                    <div class="button-group">
+                        <label class="control-label" id="hide-open-prompt" for="open-prompt-control">Cancel</label>
                     </div>
                 </div>
             </div>

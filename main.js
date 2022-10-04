@@ -49,10 +49,60 @@ window.addEventListener('load', () => {
       }
   }
 });
+// End sidebar closing gestures
+
+// Sidebar opening gestures
+window.addEventListener('load', () => {
+  let touchstartX = 0;
+  let touchendX = 0;
+
+  const gestureZone = document.querySelectorAll('.screen');
+
+  gestureZone.forEach( item => {
+    item.addEventListener('touchstart', function(event) {
+      touchstartX = event.changedTouches[0].screenX;
+    }, false);
+  });
+
+  gestureZone.forEach( item => {
+    item.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].screenX;
+        handleGesture(item);
+    }, false); 
+  });
+
+  gestureZone.forEach( item => {
+    item.addEventListener('mousedown', function(event) {
+      touchstartX = event.clientX;
+    }, false);
+  });
+
+  gestureZone.forEach( item => {
+    item.addEventListener('mouseup', function(event) {
+      touchendX = event.clientX;
+      handleGesture(item);
+    }, false); 
+  });
+
+  function handleGesture(item) {
+      // Add a small threshold of 100px to avoid false swipes
+      if (touchendX - 100 > touchstartX) {
+          item.querySelector(".sidebar-collapse").checked = true;
+      }
+  }
+});
+// End sidebar opening gestures
+
 
 window.addEventListener('load', () => {
 
-  let loadStratagems = function (identifier) {
+  let getCurrentFactionId = function() {
+
+    return window.localStorage.getItem('faction') ?? "space-marines";
+
+  };
+
+  let getCurrentFaction = function(identifier) {
 
     let currentFaction = null;
 
@@ -69,6 +119,13 @@ window.addEventListener('load', () => {
     if(currentFaction === null) {
       currentFaction = window.data[0];
     }
+
+    return currentFaction;
+  };
+
+  let loadStratagems = function (identifier) {
+
+    let currentFaction = getCurrentFaction(identifier);
 
     window.localStorage.setItem( 'faction', currentFaction.id );
 
@@ -129,12 +186,47 @@ window.addEventListener('load', () => {
   
       document.querySelector('#setup article').innerHTML += html;
     }
+
+    // Load the preset list
+    let html = '';
+
+    let savedPresets = JSON.parse( window.localStorage.getItem( 'presets' ) || '{}' );
+
+    for( let faction of window.presets ) 
+    {
+      if(faction.id === identifier)
+      {
+        // Generate public presets
+        for( let preset of faction.presets )
+        { 
+          html += generatePreset(preset, false);
+        }
+      }
+    }
+
+    // Generate custom saved presets
+    let factionSavedPresets = savedPresets[identifier] ?? [];
+
+    for( let preset of factionSavedPresets )
+    {
+      html += generatePreset(preset, true);
+    }
+    
+
+    document.getElementById( 'presets' ).innerHTML = html;
   }
 
-  // Close off the sidebar when a stratagem has been selected
+  // Close off the main sidebar when a stratagem has been selected
   document.querySelector( '#main .sidebar' ).addEventListener( 'click', (e) => {
     if (e.target && e.target.matches('a')) {
       document.getElementById( 'main-sidebar-collapse' ).checked = false;
+    }
+  });
+
+  // Close off the main sidebar when a stratagem has been selected
+  document.querySelector( '#setup .sidebar' ).addEventListener( 'click', (e) => {
+    if (e.target && e.target.matches('label')) {
+      document.getElementById( 'setup-sidebar-collapse' ).checked = false;
     }
   });
 
@@ -147,47 +239,65 @@ window.addEventListener('load', () => {
     }
   });
 
-  // When clicking on a preset, set the preset
-  document.querySelector( '#setup .sidebar' ).addEventListener( 'click', (e) => {
-    if (e.target && e.target.matches('[data-preset-id]')) {
+  let getPreset = function(presetId) {
+
+    for( faction of window.presets ) {
+      for( candidate of faction.presets ) {
+        if(candidate.id === presetId) {
+          return preset;
+        }
+      }
+    }
+
+    return null;
+  };
+
+  document.querySelector( '#presets' ).addEventListener( 'click', (e) => {
+
+    // When clicking on a preset, set the preset
+    if (e.target && e.target.matches('li[data-preset-id]')) {
+
+      let presetId = e.target.getAttribute( 'data-preset-id' );
+      let preset = getPreset(presetId);
+
+      let currentFaction = getCurrentFaction(getCurrentFactionId());
+
+      for(stratagem of currentFaction.stratagems) {
+        let elt = document.querySelector( '#setup article [data-stratagem-id="' + stratagem.id + '"]' );
+
+        if(elt.checked == false) {
+          if(preset.stratagems.includes(stratagem.id)) {
+            elt.nextElementSibling.click();
+          }
+        } else {
+          if(!preset.stratagems.includes(stratagem.id)) {
+            elt.nextElementSibling.click();
+          }
+        }
+      }
+
+      // Close the window
+      document.getElementById( 'open-prompt-control' ).checked = false;
+    }
+
+    // Trash the preset
+    if (e.target && e.target.matches('.trash[data-preset-id]')) {
+
+      let savedPresets = JSON.parse( window.localStorage.getItem( 'presets' ) || '{}' );
+
       let presetId = e.target.getAttribute( 'data-preset-id' );
 
-      // Locate the preset
-      let preset = null; 
-
-      for( faction of window.presets ) {
-        for( candidate of faction.presets ) {
-          if(candidate.id === presetId) {
-            preset = candidate;
-          }
-        }
+      if(typeof savedPresets[getCurrentFactionId()] === "undefined") {
+        savedPresets[getCurrentFactionId()] = [];
       }
-
-      // Enable the stratagems
-      if(e.target.checked) {
-        for(stratagemId of preset.stratagems) {
-          let elt = document.querySelector( '#setup article [data-stratagem-id="' + stratagemId + '"]' );
   
-          if(elt.checked == false) {
-            console.log( 'enable stratagem id ' + stratagemId );
-            elt.click();
-          }
-        }
-      }
+      savedPresets[getCurrentFactionId()] = savedPresets[getCurrentFactionId()].filter( (x) => x.id !== presetId );
 
-      // Disable the stratagems
-      if(!e.target.checked) {
-        for(stratagemId of preset.stratagems) {
-          let elt = document.querySelector( '#setup article [data-stratagem-id="' + stratagemId + '"]' );
-  
-          if(elt.checked == true) {
-            console.log( 'disable stratagem id ' + stratagemId );
-            elt.click();
-          }
-        }
-      }
+      window.localStorage.setItem('presets', JSON.stringify(savedPresets));
 
+      document.querySelector( '#presets li[data-preset-id="' + presetId + '"]' ).remove();
     }
+
   });
 
   // Save preset function
@@ -202,15 +312,25 @@ window.addEventListener('load', () => {
     preset.name = document.getElementById( 'configuration-name').value;
     preset.stratagems = [];
 
-    console.log( document.getElementById( 'setup' ).getAttribute( 'data-faction-id' ) );
-
     document.querySelectorAll( '#setup article input' ).forEach( (item) => {
       if( item.checked ) {
         preset.stratagems.push(item.getAttribute( 'data-stratagem-id' ));
       }
     });
 
-    console.log(JSON.stringify(preset));
+    // Save the preset to the local preset list
+    let savedPresets = JSON.parse( window.localStorage.getItem( 'presets' ) || '{}' );
+
+    if(typeof savedPresets[getCurrentFactionId()] === "undefined") {
+      savedPresets[getCurrentFactionId()] = [];
+    }
+
+    savedPresets[getCurrentFactionId()].push(preset);
+
+    window.localStorage.setItem('presets', JSON.stringify(savedPresets));
+
+    // Add the newly created preset to the list of the presets
+    document.querySelector( '#presets' ).innerHTML += generatePreset(preset, true);
   });
 
   // Show and hide items
@@ -228,38 +348,37 @@ window.addEventListener('load', () => {
     }
   });
 
-  // Show and hide stratagems on setup
-
-  // Setup presets
-  let html = '';
-
-  for( let faction of window.presets ) 
+  function generatePreset(preset, isCustom)
   {
-      html += '<section>';
-      html += '  <input type="radio" name="faction" id="faction-' + faction.id + '" autocomplete="off" />';
+    html = '';
+
+    html += '    <li id="preset-' + preset.id + '" class="preset ' + ( isCustom ? 'custom' : 'public' ) + '" data-preset-id="' + preset.id + '">';
+    html += '      <span>' + preset.name + '</span>';
+
+    if(isCustom) {
+      html += '      <span class="trash" data-preset-id="' + preset.id + '"></span>';
+    }
+
+    html += '    </li>';  
+
+    return html;
+  }
+
+  // Setup 
+  let html = '<h3>Faction selection</h3>';
+
+  const selectedFaction = getCurrentFactionId();
+
+  for( let faction of window.data ) 
+  {
+      html += '  <input type="radio" name="faction" id="faction-' + faction.id + '" autocomplete="off" ' + ( faction.id === selectedFaction ? ' checked="checked"' : '' ) + '/>';
       html += '  <label class="faction" for="faction-' + faction.id + '" data-faction-id="'+ faction.id + '">';
-      html += '    <img src="resources/img/factions/' + faction.icon + '.svg" title="'+ faction.name +'" />';
-      html += '    <span>' + faction.name + '</span>';
+      html += '    <img src="resources/img/factions/' + faction.id + '.svg" title="'+ faction.faction +'" />';
+      html += '    <span>' + faction.faction + '</span>';
       html += '  </label>';
-      html += '  <div class="faction-presets">';
-
-      for( let preset of faction.presets )
-      { 
-          html += '    <input type="checkbox" data-preset-id="' + preset.id + '" name="preset-' + preset.id + '" id="preset-' + preset.id + '" autocomplete="off" />';
-          html += '    <label id="label-' + preset.id + '" for="preset-' + preset.id + '">';
-          html += '      <span>' + preset.name + '</span>';
-          html += '    </label>';  
-      }
-
-      html += '  </div>';
-      html += '</section>';
   }
 
   document.querySelector( '#setup .sidebar' ).innerHTML += html;
   
-  const selectedFaction = window.localStorage.getItem('faction') ?? "space-marines";
-
-  document.querySelectorAll( '#setup .sidebar #faction-' + selectedFaction ).checked = true;
-
   loadStratagems(selectedFaction);
 });

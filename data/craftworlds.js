@@ -1,6 +1,6 @@
 window.data.push({
     "group": "Xenos",
-    "faction": "Aeldari - Craftworlds",
+    "faction": "Aeldari",
     "id": "aeldari-craftworlds",
     "stratagems": [
         {
@@ -430,7 +430,7 @@ window.data.push({
             "min_cost": 2,
             "max_cost": null,
             "fluff": "Diverting the defensive properties of their rune armour, this Spiritseer shrouds their precious wraith constructs from harm.",
-            "description": "<p>Use this Stratagem at the end of your Movement phase. Pick a WRAITH HOST <em>WRAITH</em> <em>CONSTRUCT</em> unit from your army that is within 6\" of a friendly WRAITH HOST <em>SPIRITSEER</em>. Until the start of your next turn, that unit gains a 4+ invulnerable save but the SPIRITSEER loses the 4+ invulnerable save granted by its Rune Armour.</p>",
+            "description": "<p>Use this Stratagem at the end of your Movement phase. Pick a <em>WRAITH HOST</em> <em>WRAITH CONSTRUCT</em> unit from your army that is within 6\" of a friendly <em>WRAITH HOST</em> <em>SPIRITSEER</em>. Until the start of your next turn, that unit gains a 4+ invulnerable save but the <em>SPIRITSEER</em> loses the 4+ invulnerable save granted by its Rune Armour.</p>",
             "id": "c68444"
         },
         {
@@ -450,7 +450,7 @@ window.data.push({
             "min_cost": 3,
             "max_cost": null,
             "fluff": "When the command to kill is given, a gale of razor-edged discs is unleashed to tear the enemy’s lines to shreds.",
-            "description": "<p>Use this Stratagem at the start of your Shooting phase. Pick a <em>WINDRIDER HOST</em> <em>FARSEER SKYRUNNER</em> unit from your army. Improve the Armour Penetration characteristic of shooting attacks made by friendly WINDRIDER HOST units within 6\" of the unit you picked by 1 until the end of that phase (e.g. AP-1 would become AP-2).</p>",
+            "description": "<p>Use this Stratagem at the start of your Shooting phase. Pick a <em>WINDRIDER HOST</em> <em>FARSEER SKYRUNNER</em> unit from your army. Improve the Armour Penetration characteristic of shooting attacks made by friendly <em>WINDRIDER HOST</em> units within 6\" of the unit you picked by 1 until the end of that phase (e.g. AP-1 would become AP-2).</p>",
             "id": "c1047a"
         },
         {
@@ -470,7 +470,7 @@ window.data.push({
             "min_cost": 1,
             "max_cost": null,
             "fluff": "As their deadly performance draws to a close, the players exit the stage, moving on to the next in a blaze of light and the shrieking of engines.",
-            "description": "<p>Use this Stratagem in the Fight phase, after a <em>HARLEQUINS</em> <em>INFANTRY</em> unit from your army has finished making its attacks, but before it makes a consolidation move. Instead of consolidating as normal, if every model in that unit is within 6\" of a friendly &lt;SAEDATH&gt; <em>TRANSPORT</em> model, that unit can embark within that <em>TRANSPORT</em> model as if it were your Movement phase, even if that unit has disembarked this turn, provided that <em>TRANSPORT</em> model has enough transport capacity available for the whole unit to embark.</p>",
+            "description": "<p>Use this Stratagem in the Fight phase, after a <em>HARLEQUINS</em> <em>INFANTRY</em> unit from your army has finished making its attacks, but before it makes a consolidation move. Instead of consolidating as normal, if every model in that unit is within 6\" of a friendly <em>&lt;SAEDATH&gt;</em> <em>TRANSPORT</em> model, that unit can embark within that <em>TRANSPORT</em> model as if it were your Movement phase, even if that unit has disembarked this turn, provided that <em>TRANSPORT</em> model has enough transport capacity available for the whole unit to embark.</p>",
             "id": "fcd5b3"
         },
         {
@@ -590,7 +590,7 @@ window.data.push({
             "min_cost": 1,
             "max_cost": 3,
             "fluff": "Aeldari forces of many kinds make use of the ancient labyrinth of webway portals to strike the enemy seemingly from nowhere.",
-            "description": "<p>Use this Stratagem before the battle, when declaring reserves and transports (if you are playing a mission without this step, use this Stratagem during deployment instead). If you spend lCP, you can set up one <em>ASURYANI</em> <em>INFANTRY</em>, <em>ASURYANI</em> <em>BIKER</em>, <em>HARLEQUINS</em> <em>INFANTRY</em>, <em>HARLEQUINS</em> <em>BIKER</em>, <em>YNNARI</em> <em>INFANTRY</em> or <em>YNNARI</em> <em>BIKER</em> unit from your army in the webway instead of setting it up on the battlefield. If you spend 3CPs, you can place two <em>ASURYANI</em> <em>INFANTRY</em>, <em>ASURYANI</em> <em>BIKER</em>, <em>HARLEQUINS</em> <em>INFANTRY</em>, <em>HARLEQUINS</em> <em>BIKER</em>, <em>YNNARI</em> <em>INFANTRY</em> or <em>YNNARI</em> <em>BIKER</em> units in the webway instead.In the Reinforcements step of one of your Movement phases, you can set up any units in the webway anywhere on the battlefield that is more than 9\" away from any enemy models. You can only use this Stratagem once.</p>",
+            "description": "<p>Use this Stratagem before the battle, when declaring reserves and transports (if you are playing a mission without this step, use this Stratagem during deployment instead). If you spend lCP, you can set up one <em>ASURYANI</em> <em>INFANTRY</em>, <em>ASURYANI</em> <em>BIKER</em>, <em>HARLEQUINS</em> <em>INFANTRY</em>, <em>HARLEQUINS</em> <em>BIKER</em>, <em>YNNARI</em> <em>INFANTRY</em> or <em>YNNARI</em> <em>BIKER</em> unit from your army in the webway instead of setting it up on the battlefield. If you spend 3CPs, you can place two <em>ASURYANI</em> <em>INFANTRY</em>, <em>ASURYANI</em> <em>BIKER</em>, <em>HARLEQUINS</em> <em>INFANTRY</em>, <em>HARLEQUINS</em> <em>BIKER</em>, <em>YNNARI</em> <em>INFANTRY</em> or <em>YNNARI</em> <em>BIKER</em> units in the webway instead. In the Reinforcements step of one of your Movement phases, you can set up any units in the webway anywhere on the battlefield that is more than 9\" away from any enemy models. You can only use this Stratagem once.</p>",
             "id": "fadfde"
         },
         {
@@ -600,7 +600,7 @@ window.data.push({
             "min_cost": 1,
             "max_cost": null,
             "fluff": "The Windrider Host is the fury of the craftworld carried upon the storm. The speed and cunning of this airborne formation mirrors that of the Cosmic Serpent itself.",
-            "description": "<p>Use this Stratagem when choosing your army. Pick a Craftworld Detachment from your army to be a Windrider Host Specialist Detachment. <em>AUTARCH</em> <em>SKYRUNNERS</em>, <em>FARSEER</em> <em>SKYRUNNERS</em>, WARLOCK SKYRUNNERS, WARLOCK SKYRUNNER CONCLAVES, <em>WINDRIDERS</em> and <em>VYPERS</em> in that Detachment gain the WINDRIDER HOST keyword.</p>",
+            "description": "<p>Use this Stratagem when choosing your army. Pick a Craftworld Detachment from your army to be a Windrider Host Specialist Detachment. <em>AUTARCH SKYRUNNERS</em>, <em>FARSEER SKYRUNNERS</em>, <em>WARLOCK SKYRUNNERS</em>, <em>WARLOCK SKYRUNNER CONCLAVES</em>, <em>WINDRIDERS</em> and <em>VYPERS</em> in that Detachment gain the <em>WINDRIDER HOST</em> keyword.</p>",
             "id": "57ba89"
         },
         {
@@ -630,7 +630,7 @@ window.data.push({
             "min_cost": 1,
             "max_cost": null,
             "fluff": "Guided by Spiritseers, the wraith hosts of the craftworlds are the noble houses of Aeldari myth given life once more.",
-            "description": "<p>Use this Stratagem when choosing your army. Pick a Craftworlds Detachment from your army to be a Wraith Host Specialist Detachment. <em>SPIRITSEER</em> and <em>WRAITH CONSTRUCT</em> in that Detachment gain the WRAITH HOST keyword.</p>",
+            "description": "<p>Use this Stratagem when choosing your army. Pick a Craftworlds Detachment from your army to be a Wraith Host Specialist Detachment. <em>SPIRITSEER</em> and <em>WRAITH CONSTRUCT</em> in that Detachment gain the <em>WRAITH HOST</em> keyword.</p>",
             "id": "c4128a"
         },
         {
@@ -640,7 +640,7 @@ window.data.push({
             "min_cost": 1,
             "max_cost": null,
             "fluff": "With cold and unforgiving fury, these wraith constructs carve a path of devastation through the enemy.",
-            "description": "<p>Use this Stratagem at the start of the Fight phase. Pick a WRAITH HOST <em>WRAITH CONSTRUCT</em> unit from your army. Add 1 to the Attacks characteristic of models in that unit until the end of that phase.</p>",
+            "description": "<p>Use this Stratagem at the start of the Fight phase. Pick a <em>WRAITH HOST</em> <em>WRAITH CONSTRUCT</em> unit from your army. Add 1 to the Attacks characteristic of models in that unit until the end of that phase.</p>",
             "id": "a821d5"
         },
         {
