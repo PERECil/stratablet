@@ -25,7 +25,7 @@ self.addEventListener('install', (e) => {
       'resources/icons/256.png', 
       'resources/icons/512.png',
       'resources/img/factions/astra-militarum.svg',
-      'resources/img/factions/aeldari-craftworld.svg',
+      'resources/img/factions/aeldari-craftworlds.svg',
       'resources/img/factions/space-marines.svg',
       'resources/img/factions/tau-empire.svg',
       'resources/img/factions/adeptus-custodes.svg',
