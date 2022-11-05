@@ -24,12 +24,12 @@ self.addEventListener('install', (e) => {
       'resources/icons/128.png',
       'resources/icons/256.png', 
       'resources/icons/512.png',
-      'resources/img/astra-militarum.svg',
-      'resources/img/aeldari-craftworld.svg',
-      'resources/img/space-marines.svg',
-      'resources/img/tau-empire.svg',
-      'resources/img/adeptus-custodes.svg',
-      'resources/img/thousand-sons.svg'
+      'resources/img/factions/astra-militarum.svg',
+      'resources/img/factions/aeldari-craftworld.svg',
+      'resources/img/factions/space-marines.svg',
+      'resources/img/factions/tau-empire.svg',
+      'resources/img/factions/adeptus-custodes.svg',
+      'resources/img/factions/thousand-sons.svg'
     ])),
   );
 });
