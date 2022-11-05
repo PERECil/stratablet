@@ -1,6 +1,6 @@
 self.addEventListener('install', (e) => {
   e.waitUntil(
-    caches.open('stratablet-v5').then((cache) => cache.addAll([
+    caches.open('stratablet-v6').then((cache) => cache.addAll([
       'index.html',
       'main.js',
       'data/presets.js',
